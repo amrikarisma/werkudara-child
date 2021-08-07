@@ -1,0 +1,104 @@
+footer {
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+    .footer-full-wrap {
+        background: 50% 100% no-repeat;
+        background-color: var(--main);
+        color: #fff;
+        padding: 35px 0 108px 0;
+        position: relative;
+        opacity: 0.9;
+    }
+    .copyright-wrap {
+        position: relative;
+        background-color: var(--main);
+        color: #fff;
+        text-align: center;
+        padding: 25px 0 25px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        .copyright {
+            opacity: 0.5;
+            font-size: 12px;
+        }
+    }
+    .footer-full-wrap + .copyright-wrap {
+        margin-top: -73px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+.footer-widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-widget {
+    &.widget_pages, 
+    &.widget_categories, 
+    &.widget_archive, 
+    &.widget_ltx_navmenu, 
+    &.widget_nav_menu,
+    &.widget_meta {
+        ul {
+            list-style: none;
+            margin: 0 0 0 -30px;
+            padding: 0;
+            float: none;
+            li {
+                padding: 0;
+                margin: 0;
+                float: none;
+                margin-left: 30px;
+            }
+        }
+        ul {
+            li {
+                a {
+                    display: block;
+                    font-size: 14px;
+                    font-family: 'Playfair Display', sans-serif;
+                    font-weight: 700;
+                    font-weight: 400;
+                    margin: 0;
+                    padding: 0 0 15px 0;
+                    &::before {
+                        display: inline-block;
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        content: " \f105";
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-right: 9px;
+                        margin-top: -4px;
+                        vertical-align: middle;
+                        color: #88B44E;
+                        -webkit-transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -o-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
+                    }
+                    &:not(.btn) {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .widget-title {
+        padding: 0px 0px 0;
+        margin: 18px 0 36px 0;
+        font-size: 30px;
+        line-height: 1.2em;
+        color: #88B44E;
+        position: relative;
+    }
+}

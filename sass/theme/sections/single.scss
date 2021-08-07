@@ -1,0 +1,12 @@
+.single {
+    background-color: #FDFCF8;
+    .entry-content {
+        font-size: 20px;
+        @media (min-width: 992px) {
+            font-size: vw(20px);
+        }
+    }
+    .entry-footer {
+        margin-bottom: 50px;
+    }
+}

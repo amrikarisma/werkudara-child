@@ -1,0 +1,12 @@
+.wpcf7-submit {
+    margin: 0 auto !important;
+}
+.wpcf7-form-control-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 4px;
+}
+.wpcf7-form-control-wrap:not(.margin-none) {
+    margin-bottom: 4px;
+}

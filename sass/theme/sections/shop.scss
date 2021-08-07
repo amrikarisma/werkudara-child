@@ -1,0 +1,218 @@
+.woocommerce-result-count {
+    font-size: 16px;
+    padding: 25px 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    font-weight: 400;
+    padding-left: 30px;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: #F5F8F2;
+        -webkit-border-radius: 36px;
+        -webkit-background-clip: padding-box;
+        -moz-border-radius: 36px;
+        -moz-background-clip: padding;
+        border-radius: 36px;
+        background-clip: padding-box;
+        display: block;
+        height: 75px;
+        left: 15px;
+        right: 15px;
+        top: 0;
+        z-index: -1;
+    }
+}
+.woocommerce {
+    h2 {
+        font-size: 30px;
+    }
+    .woocommerce-ordering {
+        padding: 0;
+        margin: 15px 0 20px;
+    }   
+    .price_slider_wrapper {
+        position: relative;
+        padding-bottom: 40px;
+        margin-right: 8px;
+    }
+    .widget_price_filter {
+        .ui-slider {
+            .ui-slider-range,
+            .ui-slider-handle {
+                background-color: #88B44E;
+            }
+            .ui-slider-handle {
+                width: 1em;
+                height: 1em;
+                top: -5px;
+            }
+        }
+    }
+    .widget_price_filter {
+        .price_slider_amount {
+            text-align: center;
+            .btn {
+                float: none;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 0;
+            }
+        }
+    }
+    .price_label {
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 20px;
+        font-family: 'Playfair Display', sans-serif;
+        font-family: var(--font-headers), sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .widget_product_tag_cloud {
+        .tagcloud {
+            text-align: center;
+            a {
+                display: inline-block;
+                margin-right: 8px;
+                margin-bottom: 8px;
+                color: #252C30;
+                font-size: 12px !important;
+                font-family: 'Playfair Display', sans-serif;
+                font-weight: 700;
+                font-weight: 900;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                -webkit-border-radius: 32px;
+                -webkit-background-clip: padding-box;
+                -moz-border-radius: 32px;
+                -moz-background-clip: padding;
+                border-radius: 32px;
+                background-clip: padding-box;
+                &:hover {
+                    color: #88B44E;
+                }
+                &::before {
+                    font-family: 'Open Sans', sans-serif;
+                    content: "#";
+                    font-weight: 400;
+                    color: #88B44E;
+                    font-size: 12px;
+                    zoom: 1;
+                    filter: alpha(opacity=100);
+                    -webkit-opacity: 1;
+                    -moz-opacity: 1;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.woocommerce-MyAccount-navigation, .widget-area {
+    border-top: 4px solid #88B44E;
+    border-color: #88B44E;
+    margin-bottom: 35px;
+    padding: 0px 35px 35px;
+    font-size: 14px;
+    background-color: #F5F8F2;
+    @media (min-width:991px) {
+        margin-top: -91px;
+        padding: 90px 35px 35px;
+    }
+    aside {
+        padding: 0 0;
+        margin-bottom: 55px;
+        position: relative;
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        -webkit-background-clip: padding-box;
+        -moz-border-radius: 2px;
+        -moz-background-clip: padding;
+        border-radius: 2px;
+        background-clip: padding-box;
+        ul {
+            margin: 0 0 0 0px;
+            padding: 0;
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+                vertical-align: middle;
+                position: relative;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                font-family: 'Playfair Display', sans-serif;
+                font-weight: 700;
+                font-weight: 400;
+                font-size: 16px;
+                &::before {
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    content: "●";
+                    font-size: 10px;
+                    color: #88B44E;
+                    margin-right: 10px;
+                    font-weight: bold;
+                    vertical-align: baseline;
+                    position: absolute;
+                    left: 0;
+                    top: 7px;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                }
+                a {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    font-size: 16px;
+                    padding-left: 15px;
+                    padding-bottom: 0px;
+                    line-height: 1.4em;
+                    font-family: 'Playfair Display', sans-serif;
+                    font-weight: 700;
+                    font-weight: 600;
+                    color: #252C30;
+                    &:hover {
+                        color: #88B44E;
+                    }
+                }
+            }
+        }
+    }
+    .widget-title {
+        padding: 0px 0px 0 30px;
+        margin: 0 0px 25px;
+        font-size: 24px;
+        line-height: 1.2em;
+        color: #252C30;
+        color: var(--black);
+        background-image: url(//chaitan.like-themes.com/wp-content/themes/chaitan/assets/images/header-default-icon.png);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        position: relative;
+        display: inline-block;
+        &::after {
+            bottom: 6px;
+            left: 10px;
+            position: relative;
+            border-bottom: 1px solid #88B44E;
+            border-color: #88B44E;
+            width: 30px;
+            content: "";
+            display: inline-block;
+        }
+    }
+
+}
