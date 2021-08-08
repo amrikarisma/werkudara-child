@@ -1,9 +1,82 @@
 .single {
     background-color: #FDFCF8;
+    .wrapper-title {
+        justify-content: space-around;
+        align-items: center;
+        a {
+            svg {
+                color: var(--dark);
+            }
+        }
+        svg {
+            width: 45px;
+            height: auto;
+            color: var(--secondary);
+            @media (min-width: 992px) {
+                width: vw(64px);
+            }
+        }
+        .entry-title {
+            letter-spacing: 1px;
+            font-size: 28px;
+            @media (min-width: 992px) {
+                font-size: vw(65px);
+            }
+        }
+    }
+    .wrap-featured-image {
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 60px;
+        @media (min-width: 992px) {
+            height: vw(450px);
+            margin-bottom: vw(100px);
+        }
+        img {
+            width: 100%;
+            height: fit-content;
+        }
+    }
     .entry-content {
-        font-size: 20px;
+        font-size: 18px;
         @media (min-width: 992px) {
             font-size: vw(20px);
+        }
+        p, dl, ol, ul {
+            margin-bottom: 30px;
+            @media (min-width: 992px) {
+                margin-bottom: vw(50px);
+            }
+        }
+        blockquote.wp-block-quote {
+            margin-left: 10%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align:center;
+            @media (min-width: 992px) {
+                margin-top: vw(50px);
+                margin-bottom: vw(50px);
+            }
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                @media (min-width: 992px) {
+                    font-size: vw(50px);
+                }
+            }
+            cite {
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 1px;
+                @media (min-width: 992px) {
+                    font-size: vw(20px);
+                }
+            }
+        }
+        .wp-block-separator {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            width: 100px;
         }
     }
     .entry-footer {

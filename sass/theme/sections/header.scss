@@ -74,13 +74,13 @@
             }
             .nav-link {
                 font-size: 23px;
+                color: var(--dark);
+                font-weight: 600;
+                text-transform: uppercase;
                 @media(min-width: 992px) {
                     padding: vw(50px) vw(30px);
                     font-size: vw(23px);
                 }
-                font-weight: 600;
-                text-transform: uppercase;
-                color: var(--main);
             }
         }
         a.navbar-brand.custom-logo-link {

@@ -140,6 +140,14 @@
                     .box-content-slider {
                         background-color: #fff;
                         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+                        margin-left: 30px;
+                        margin-right: 30px;
+                        @media (min-width: 992px) {
+                            padding:vw(10px) vw(20px);
+                            font-size: inherit;
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
                         .contract {
                             background-color: var(--main);
                             width: 100%;

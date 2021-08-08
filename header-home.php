@@ -35,49 +35,6 @@ $container = get_theme_mod('bensemangat_container_type');
 
     <?php do_action('wp_body_open'); ?>
     <div class="site" id="page">
-        <div class="topbar-wrapp color-scheme-light">
-            <div class="container">
-                <div class="topbar-content">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="topbar-left">
-                                <?php if (get_theme_mod('bensemangat_site_info_phone') != "") : ?>
-                                    <span class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i>
-                                        <?php echo get_theme_mod('bensemangat_site_info_phone'); ?></span>
-                                <?php endif; ?>
-                                <?php if (get_theme_mod('bensemangat_site_info_address') != "") : ?>
-                                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <?php echo get_theme_mod('bensemangat_site_info_address'); ?></span>
-                                <?php endif; ?>
-                                <?php if (get_theme_mod('bensemangat_site_info_text') != "") : ?>
-                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        <?php echo get_theme_mod('bensemangat_site_info_text'); ?></span>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-none d-sm-block">
-                            <div class="topbar-right text-right">
-                                <?php
-                                wp_nav_menu(
-                                    array(
-                                        'theme_location'  => 'topbar',
-                                        'container_class' => '',
-                                        'container_id'    => 'navbar-nav',
-                                        'menu_class'      => '',
-                                        'fallback_cb'     => '',
-                                        'menu_id'         => 'topbar-menu',
-                                        'depth'           => 2,
-                                        'walker'          => new Bensemangat_WP_Bootstrap_Navwalker(),
-                                    )
-                                );
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         <!-- ******************* The Navbar Area ******************* -->
         <div id="wrapper-navbar" class="navbar-layout-desktop inited">
 

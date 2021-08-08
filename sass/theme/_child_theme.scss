@@ -27,6 +27,7 @@ html, body {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-family: var(--font-main), sans-serif;
+    height: 100%;
 }
 body {
     background-image: linear-gradient(to right, #F5F5F5 , #D7D7D7);
@@ -328,6 +329,9 @@ input[type="button"],
         padding: 5px;
         @media(min-width: 992px) {
             padding: 5px 10px;
+        }
+        a {
+            color: var(--white);
         }
         svg {
             width: 25px;

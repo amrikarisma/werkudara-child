@@ -7087,7 +7087,6 @@ AOS.init({
   once: false, // whether animation should happen only once - while scrolling down
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
 });
 
 var homepage = new Swiper('.homepage', {
@@ -7105,16 +7104,11 @@ var homepage = new Swiper('.homepage', {
 });
 
 var team = new Swiper('.team', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   slidesPerView: 1,
-  centeredSlides: true,
   spaceBetween: 30,
   breakpoints: {
     1024: {
@@ -7123,20 +7117,25 @@ var team = new Swiper('.team', {
     },
   },
 });
+var swiper = new Swiper(".swiper-client-logo", {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 5,
+  slidesPerColumn: 4,
+  slidesPerColumnFill: 'row',
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 var teamCareer = new Swiper('.team-career', {
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   slidesPerView: 1,
-  centeredSlides: true,
   spaceBetween: 30,
   breakpoints: {
     1024: {
@@ -7146,43 +7145,6 @@ var teamCareer = new Swiper('.team-career', {
   },
 });
 
-if(jQuery(".products .swiper-wrapper").data('count') > 1) {
-  var swiper = new Swiper('.products', {
-    cssMode: true,
-    // height:680,
-    // autoHeight:true,
-    slidesPerView:3,
-    loop: true,
-    autoplay:true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination'
-    },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      }
-    }
-  });
-} else {
-  jQuery('.swiper-wrapper').addClass( "disabled" );
-  jQuery('.swiper-button-prev').css( "display", "none" );
-  jQuery('.swiper-button-next').css( "display", "none" );
-}
 
 jQuery("[data-trigger]").on("click", function(){
   var trigger_id =  jQuery(this).attr('data-trigger');
