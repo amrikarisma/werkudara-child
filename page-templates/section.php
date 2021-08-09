@@ -66,7 +66,7 @@ while (have_posts()) :
 
         endforeach;
 
-        get_template_part('loop-templates/content', 'footer', $section);
+        get_template_part('component-templates/comp', 'footer-information');
 
     endif;
 

@@ -134,9 +134,7 @@ section {
         -moz-opacity: 0.03;
         opacity: 0.03;
         z-index: 1;
-        font-family: 'Playfair Display', sans-serif;
-        font-family: var(--font-headers), sans-serif;
-        font-weight: 700;
+        font-family: var(--font-main), sans-serif;
         font-weight: 900;
         font-size: 150px;
         top: 50%;
@@ -319,8 +317,7 @@ section {
         margin: 64px 0 16px;
     }
     .subheading {
-        font-family: 'Playfair Display', sans-serif;
-        font-family: var(--font-headers), sans-serif;
+        font-family: var(--font-main), sans-serif;
         font-style: italic;
         font-size: 18px;
         margin-bottom: 35px;

@@ -24,10 +24,13 @@
     }
 }
 html, body {
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-family: var(--font-main), sans-serif;
     height: 100%;
+    @media (min-width: 992px) {
+        font-size: 20px;
+    }
 }
 body {
     background-image: linear-gradient(to right, #F5F5F5 , #D7D7D7);
@@ -35,7 +38,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: var(--font-main), sans-serif;
     font-weight: 700;
     font-weight: 900;
     -ms-word-wrap: break-word;
@@ -84,7 +87,7 @@ a:focus {
     text-decoration: none;
 }
 .container {
-    @media (min-width: 992px) and (max-width: 1400px) {
+    @media (min-width: 1200px) and (max-width: 1400px) {
         max-width: 1140px;
     }
 }
@@ -95,10 +98,8 @@ label {
     z-index: 2;
 }
 .header {
-    font-family: 'Playfair Display', sans-serif;
-    font-family: var(--font-headers), sans-serif;
-    font-weight: 700;
-    font-weight: 900;
+    font-family: var(--font-main), sans-serif;
+    font-weight: bold;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
@@ -152,10 +153,7 @@ form input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([ty
     display: block;
     margin: 0 auto;
     color: rgba(0, 0, 0, 0.8);
-    font-family: 'Playfair Display', sans-serif;
-    font-family: var(--font-headers), sans-serif;
-    font-weight: 700;
-    font-weight: 400;
+    font-family: var(--font-main), sans-serif;
     padding: 20px 30px;
     border: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -202,7 +200,7 @@ input[type="submit"],
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: var(--font-main), sans-serif;
     font-weight: 700;
     -webkit-background-clip: border-box;
     -moz-background-clip: border-box;
@@ -210,6 +208,10 @@ input[type="submit"],
     color: #fff;
     color: var(--white);
     background-color: var(--main);
+}
+input[type="button"], 
+input[type="submit"] {
+    padding: 15px 34px 15px 34px;
 }
 .button.btn-xs, input[type="button"].btn-xs, input[type="submit"].btn-xs, .btn.btn-xs {
     font-size: 12px;

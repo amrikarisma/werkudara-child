@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: About
  *
@@ -9,39 +10,39 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 get_header();
-while ( have_posts() ) :
+while (have_posts()) :
     the_post();
-	get_template_part( 'component-templates/comp', 'header' );
+    get_template_part('component-templates/comp', 'header');
 
-    if ( have_rows( 'section' ) ): 
+    if (have_rows('section')) :
 
         $sections = get_field('section');
 
         foreach ($sections as $section) :
 
-            switch ($section['acf_fc_layout']) :
-            
+            switch ($section['acf_fc_layout']):
+
                 case 'about':
-                    get_template_part( 'loop-templates/content', 'about', $section );
+                    get_template_part('loop-templates/content', 'about', $section);
                     break;
                 case 'contact':
-                    get_template_part( 'loop-templates/content', 'contact', $section );
+                    get_template_part('loop-templates/content', 'contact', $section);
                     break;
                 case 'maps':
                     // var_dump($section);
                     // die();
-                    get_template_part( 'loop-templates/content', 'maps', $section );
+                    get_template_part('loop-templates/content', 'maps', $section);
                     break;
                 case 'products':
                     // var_dump($section);
                     // die();
-                    get_template_part( 'loop-templates/content', 'products', $section );
+                    get_template_part('loop-templates/content', 'products', $section);
                     break;
 
-                
+
                 default:
                     # code...
                     break;
@@ -54,10 +55,8 @@ while ( have_posts() ) :
 
 
 
+    get_template_part('component-templates/comp', 'footer-information');
 
-    // get_template_part( 'component-templates/comp', 'header' );
-	// get_template_part( 'loop-templates/content', 'about' );
-	// get_template_part( 'loop-templates/content', 'contact' );
 endwhile;
 
 get_footer();

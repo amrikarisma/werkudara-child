@@ -220,9 +220,9 @@
         color: #F3680F;
         font-weight: bold;
         text-transform: uppercase;
-        font-size: 16px;
-        height: 100px;
-        width: 100px;
+        font-size: 13px;
+        height: 70px;
+        width: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -235,6 +235,12 @@
     }
     .team {
         position: relative;
+        .swiper-wrapper {
+            padding-bottom: 40px;
+            @media(min-width: 992px) {
+                padding-bottom: 0;
+            }
+        }
         .swiper-slide {
             background-repeat:no-repeat;
             background-size:cover;
@@ -244,7 +250,7 @@
             }
         }
         .swiper-slide-active {
-            height: 640px;
+            height: 540px;
             border-bottom: 10px solid #50BF9B;
             @media(min-width: 992px) {
                 height: vw(640px);
@@ -257,11 +263,15 @@
         }
         .wrap-button-prev-next {
             position: absolute;
-            bottom: 15px;
+            bottom: 40px;
             right: 40px;
             display: block;
             height: 0;
             @media(min-width: 992px) {
+                right: 40px;
+                bottom: 30px;
+            }
+            @media(min-width: 1400px) {
                 right: vw(40px);
                 bottom: vw(30px);
             }
@@ -561,10 +571,15 @@
     .wrapper-carousel-section-7 {
         display: flex;
         justify-content: center;
+        height: 400px;
+        @media(min-width: 992px) {
+            height: auto;
+        }
         .carousel-image-section-7 {
+            height: auto;
             text-align: center;
             position: relative;
-            width: 1024px;
+            width: 100%;
             @media(min-width: 992px) {
                 width: vw(1024px);
             }
@@ -614,7 +629,6 @@
         position: relative;
         @media (max-width: 991px) {
             flex-direction: column;
-            margin-top: 400px;
         }
         .counter {
             display: inline-block;
@@ -749,10 +763,13 @@
             font-size: 17px;
             letter-spacing: 1px;
             @media(min-width: 992px) {
-                width: 90%;
-                padding: vw(10px);
-                bottom: vw(10px);
+                width: 87%;
+                padding: 10px;
+                bottom: 10px;
                 font-size: vw(36px);
+            }
+            @media(min-width: 1400px) {
+                width: 90%;
             }
         }
         .news-overlay {
