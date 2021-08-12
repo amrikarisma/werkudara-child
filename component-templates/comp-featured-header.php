@@ -21,10 +21,10 @@
     url('<?php echo $url[4] ?? ''; ?>'),
     url('<?php echo $url[5] ?? ''; ?>');
     ">
-    <div class="section-home-1">
+    <div class="section-element section-home-1" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
         <div class="text-featured-header-float">
             <h3 data-aos="fade-in" data-aos-delay="1200" data-aos-duration="3000"><?php echo get_sub_field('title'); ?></h3>
             <div class="line"></div>
-            <h4 data-aos="fade-in" data-aos-delay="1500" data-aos-duration="3000"><?php echo get_sub_field('subtitle'); ?></h4>
+            <h4 data-aos="fade-in" data-aos-delay="2000" data-aos-duration="4000" data-aos-offset="-200"><?php echo get_sub_field('subtitle'); ?></h4>
         </div>
     </div>

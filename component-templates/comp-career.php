@@ -1,17 +1,19 @@
-<div class="career">
-    <div class="container">
-        <div class="header-featured-image" style="background-image: url('https://werkudara.kerja.dev/wp-content/uploads/2021/08/laptop-2434393_1920.jpeg);">
-            <div class="wrapper-text-header-featured">
-                <div class="container">
-                    <h2 data-aos="fade-left" data-aos-delay="200">What your Choice?</h2>
-                    <a class="btn btn-primary " data-aos="fade-up" data-aos-delay="500" href="#">Explore Role</a>
+<div class="career" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+    <div class="section-element section-header-career">
+        <div class="container">
+            <div class="header-featured-image" style="background-image: url('https://werkudara.kerja.dev/wp-content/uploads/2021/08/laptop-2434393_1920.jpeg);">
+                <div class="wrapper-text-header-featured">
+                    <div class="container">
+                        <h2 data-aos="fade-left" data-aos-delay="200">What your Choice?</h2>
+                        <a class="btn btn-primary " data-aos="fade-up" data-aos-delay="500" href="#">Explore Role</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-content-career">
         <div class="container">
-            <div class="list-content">
+            <div class="section-element list-content">
                 <div class="category" data-aos="fade-left" data-aos-delay="700">
                     <span>Our Mission</span>
                 </div>
@@ -22,7 +24,7 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta mollitia perspiciatis recusandae corporis quidem molestiae dolorum perferendis molestias nobis quibusdam aliquid laudantium non exercitationem, neque magnam iusto accusamus. Possimus, totam.</p> <a class="readmore" href="#">Read more..</a>
                 </div>
             </div>
-            <div class="list-content">
+            <div class="section-element list-content">
                 <div class="category" data-aos="fade-up" data-aos-delay="200">
                     <span>Our Core Value</span>
                 </div>
@@ -59,7 +61,7 @@
                     </ol> -->
                 </div>
             </div>
-            <div class="list-content">
+            <div class="section-element list-content">
                 <div class="category" data-aos="fade-up" data-aos-delay="200">
                     <span>Opportunities</span>
                 </div>
@@ -144,7 +146,7 @@
             </div>
         </div>
     </div>
-    <div class="recruitment-process">
+    <div class="section-element recruitment-process">
         <h3 data-aos="fade-up" data-aos-delay="200">Our Recruitment Process</h3>
         <div class="container">
             <div class="wrapper-content-recruitment">

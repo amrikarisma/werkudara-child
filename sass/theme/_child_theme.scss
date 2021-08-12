@@ -165,10 +165,7 @@ form input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([ty
     -moz-background-clip: padding;
     border-radius: 36px;
     background-clip: padding-box;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 .button, 
 input[type="button"], 
@@ -187,19 +184,16 @@ input[type="submit"],
     -moz-background-clip: padding;
     border-radius: 36px;
     background-clip: padding-box;
-    transition: color 0.3s ease, opacity 0.3s ease, border 0.3s ease, background 0.3s ease, box-shadow 0.25s ease-in-out;
-    font-size: 14px;
-    padding: 15px 56px 15px 34px;
+    transition: color 0.5s ease, opacity 0.5s ease, border 0.5s ease, background 0.3s ease, box-shadow 0.25s ease-in-out;
+    font-size: 16px;
+    padding: 8px 40px 8px 15px;
     margin-bottom: 25px;
     min-width: 170px;
     position: relative;
     overflow: hidden;
     display: inline-block;
     border: 0;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     font-family: var(--font-main), sans-serif;
     font-weight: 700;
     -webkit-background-clip: border-box;
@@ -231,19 +225,19 @@ input[type="submit"] {
 input[type="button"], 
 input[type="submit"], 
 .btn {
+    transition: all 1s ease;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
     &::after {
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease;
+        transition: all 1s ease;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: inherit;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        content: "\f138";
-        font-size: 14px;
+        content: "\f054";
+        font-size: 16px;
         margin-left: 10px;
         padding-top: 1px;
         position: absolute;
@@ -349,7 +343,29 @@ input[type="button"],
     display: block;
     clear: both;
   }
-  
+  .grid-item {
+      .news-item-link {
+          &:hover {
+              h2 {
+                  &.news-title {
+                      padding: 10px 10px 5px 10px;
+                      top: 0;
+                      bottom: inherit;
+                  }
+              }
+              .news-overlay {
+                top: 30px;
+                left: 30px;
+                right: 30px;
+                bottom: 30px;
+                background-color: var(--main);
+                background-image: none;
+                opacity: 0.8;
+                height: inherit;
+              }
+          }
+      }
+  }
   .grid-sizer,
   .grid-item {
     width: 33.333%;

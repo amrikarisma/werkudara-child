@@ -3,6 +3,15 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
+function getIdFromTitle($title)
+{
+    $title = str_replace(' ', '_', $title);
+    $title = strtolower($title);
+    $title = strip_tags($title);
+    $title = preg_replace('/[^A-Za-z0-9_\-]/', '', $title);
+    return $title;
+}
+
 function bensemangat_remove_scripts()
 {
     wp_dequeue_style('bensemangat-styles');
@@ -27,6 +36,7 @@ function theme_enqueue_styles()
     wp_enqueue_script('animate-scripts', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
     wp_enqueue_script('imagesloaded-scripts', get_stylesheet_directory_uri() . '/js/masonry/imagesloaded.pkgd.js', array(), $the_theme->get('Version'), true);
     wp_enqueue_script('masonry-scripts', get_stylesheet_directory_uri() . '/js/masonry/masonry.js', array(), $the_theme->get('Version'), true);
+    wp_enqueue_script('scrollify-scripts', get_stylesheet_directory_uri() . '/js/jquery.scrollify.js', array(), $the_theme->get('Version'), true);
     wp_enqueue_script('my-responive-menu', get_stylesheet_directory_uri() . '/js/bigSlide.min.js', array(), '20161214', true);
     wp_enqueue_script('child-bensemangat-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get('Version'), true);
     if (is_singular() && comments_open() && get_option('thread_comments')) {

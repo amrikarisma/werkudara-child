@@ -1,6 +1,6 @@
-<div class="section-home-10">
+<div class="section-element section-home-11" id="footer_information">
     <div class="container">
-        <div class="text-section-10">
+        <div class="text-section-11">
             <div class="wrapper-footer-information">
                 <div class="footer-information">
                     <div class="row">
@@ -61,6 +61,7 @@
                     </div>
                 </div>
             </div>
+            <hr>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="section-home-6">
+<div class="section-element section-home-6" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="wrapper-section-home-6" style="background-image:linear-gradient(<?php echo get_sub_field('background'); ?>,<?php echo get_sub_field('background'); ?>);">
         <div data-aos="fade-left" data-aos-delay="1200" id="tree-1" class="tree" style="background-image:url('/wp-content/uploads/2021/08/kisspng-spruce-fir-pine-artificial-christmas-tree-5b65a0bc542721.7511793015333869403447-removebg-preview.png');
 

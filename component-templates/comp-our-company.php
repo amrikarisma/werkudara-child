@@ -1,4 +1,4 @@
-<div class="our-company-1">
+<div class="our-company-1" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="wrap-company-list-tab" data-aos="fade-in" data-aos-delay="500">
             <div class="nav flex-column nav-pills company-list-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">

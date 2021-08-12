@@ -1,4 +1,4 @@
-<div class="section-home-3">
+<div class="section-element section-home-3" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-3">
             <h3 class="" data-aos="fade-left" data-aos-delay="600"><?php echo get_sub_field('title'); ?></h3>
@@ -8,14 +8,13 @@
             <?php if (have_rows('list')) : ?>
                 <div class="list-feature-section-3">
                     <div class="row">
+                        <?php $bussinessCount = 400; ?>
                         <?php while (have_rows('list')) : the_row(); ?>
-                            <div class="col align-self-end item-featured" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-6 col-md align-self-end item-featured" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
                                 <?php $image = get_sub_field('image'); ?>
                                 <?php if ($image) : ?>
                                     <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                 <?php endif; ?>
-
-
 
                                 <?php $link = get_sub_field('link'); ?>
                                 <?php if ($link) : ?>
@@ -26,6 +25,7 @@
                                     <h4><?php the_sub_field('title'); ?></h4>
                                 <?php endif; ?>
                             </div>
+                            <?php $bussinessCount = $bussinessCount * 1.5; ?>
                         <?php endwhile; ?>
                     </div>
                 </div>

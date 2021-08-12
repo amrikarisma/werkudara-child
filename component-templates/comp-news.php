@@ -1,4 +1,4 @@
-<div class="section-home-8">
+<div class="section-element section-home-8" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-8">
             <h3 data-aos="fade-left" data-aos-delay="300"><?php echo get_sub_field('title'); ?></h3>
@@ -23,7 +23,7 @@
 
                         $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full"); ?>
                         <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
-                            <a href="<?php the_permalink(); ?>">
+                            <a class="news-item-link" href="<?php the_permalink(); ?>">
                                 <div class="news-overlay"></div>
                                 <img src="<?php echo $image[0]; ?>" />
                                 <h2 class="news-title"><?php the_title(); ?></h2>

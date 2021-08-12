@@ -7162,6 +7162,20 @@ jQuery(".btn-close").on('click', function(e){
 // init Masonry
 
 jQuery(function ($) {
+  if($('.section-element').length > 0) {
+    $.scrollify({
+      section : ".section-element",
+      scrollSpeed:1100,
+      offset : 0,
+      scrollbars:true,
+      sectionName:false,
+      setHeights: false,
+      overflowScroll: true,
+      updateHash: true,
+      touchScroll:true,
+      interstitialSection:"#wrapper-navbar,footer"
+    });
+  }
 
   if($('.content-recruitment-tab').length > 0 && window.innerWidth < 992) {
     $('.tab-content-content-recruitment').hide();
@@ -7183,12 +7197,12 @@ jQuery(function ($) {
   }
 
   $('#home_featured_section').mousemove(function(e){
-    // var amountMovedX = (e.pageX * -1 / 6)+200;
-    // var amountMovedY = (e.pageY * -1 / 6)+200;
-    // $(this).css({
-    //   'background-position': 'top 300px left 100px, '+amountMovedY+'px '+amountMovedX+'px, top 200px left 50px, top 970px right,top 970px right -300px, top 1000px right'
-    // });
-    // console.log($(this).css('background-position'));
+    var amountMovedX = (e.pageX * -1 / 6)+200;
+    var amountMovedY = (e.pageY * -1 / 6)+200;
+    $(this).css({
+      // 'background-position': 'top 300px left 100px, '+amountMovedY+'px '+amountMovedX+'px, top 200px left 50px, top 970px right,top 970px right -300px, top 1000px right'
+    });
+    console.log($(this).css('background-position'));
     // $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
   });
 
@@ -7217,23 +7231,52 @@ const elementInView = (el, scrollOffset = 0) => {
   );
 };
 
-const displayScrollElement = (element) => {
-// Main function
-for(let n of scrollElements) {
-  const updateCount = () => {
-    const target = + n.getAttribute('data-target');
-    const count = + n.innerText;
-    const speed = 5000; // change animation speed here
-    const inc = target / speed; 
-    if(count < target) {
-      n.innerText = Math.ceil(count + inc);
-      setTimeout(updateCount, 1);
-    } else {
-      n.innerText = target;
-    }
+const hideScrollElement = (element) => {
+  for(let n of scrollElements) {
+    n.innerText = 0;
   }
-  updateCount();
-}
+};
+
+const displayScrollElement = (element) => {
+  // Main function
+  let lengthOfEl;
+  for(let n of scrollElements) {
+    lengthOfEl++;
+    if(lengthOfEl < scrollElements.length) {
+      return;
+    }
+    if(n.innerText != 0) {
+      return;
+    }
+    const updateCount = () => {
+      const target = + n.getAttribute('data-target');
+      const count = + n.innerText;
+      const speed = 1000; // change animation speed here
+      const inc = target / speed; 
+      let timeout;
+      if(target > 500) {
+        timeout = 1;
+      } else if(target > 300) {
+        timeout = 10;
+      } else if(target > 100) {
+        timeout = 100;
+      } else if(target > 50) {
+        timeout = 150;
+      } else if(target > 10) {
+        timeout = 200;
+      }else {
+        timeout = 1000;
+      }
+      if(count < target) {
+        n.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, timeout);
+      } else {
+        n.innerText = target;
+      }
+
+    }
+    updateCount();
+  }
 };
 
  
@@ -7241,6 +7284,8 @@ const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInView(el, 100)) {
       displayScrollElement(el);
+    } else {
+      // hideScrollElement(el);
     }
   })
 }
