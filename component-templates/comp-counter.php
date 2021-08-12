@@ -1,4 +1,4 @@
-<div class="section-element section-home-7" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-7" id="counter">
     <div class="container">
         <div class="wrapper-carousel-section-7">
             <?php $gallery_images = get_sub_field('gallery'); ?>

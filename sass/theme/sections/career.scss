@@ -13,7 +13,7 @@
         margin-bottom: 30px;
         @media (min-width: 992px) {
             border-radius: vw(25px);
-            height: vw(500px);
+            height: vw(720px);
             margin-left: vw(-130px);
             margin-right: vw(-130px);
         }
@@ -26,9 +26,12 @@
                 bottom: vw(30px);
             }
             h2 {
-                font-size: 36px;
+                font-size: 32px;
+                font-family: var(--font-headers),sans-serif;
                 @media (min-width: 992px) {
-                    font-size: vw(52px);
+                    font-size: vw(100px);
+                    margin-bottom: vw(40px);
+                    letter-spacing: vw(7px);
                 }
             }
             a {
@@ -100,9 +103,10 @@
             .wrap-item-list {
                 display: flex;
                 flex-direction: column;
-                padding-top: 30px;
+                padding-top: 120px;
                 @media (min-width: 992px) {
                     flex-direction: row;
+                    padding-top: vw(120px);
                 }
                 .item-list {
                     display: flex;
@@ -199,6 +203,55 @@
                 }
             }
             
+        }
+    }
+    .text-expandable {
+
+        &.wrap-content {
+            .content-list-content {
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .text-list-hover {
+        position: relative;
+        overflow: hidden;
+        padding-top: 60px;
+        @media(min-width: 992px) {
+            padding-top: vw(60px);
+        }
+        .title {
+            width: 60vw;
+        }
+        .wrap-item-list {
+            .image-list-content {
+                position: absolute;
+                top: -1000px;
+                right: 9vw;
+                width: 250px;
+                transition: all 0.5s ease-in-out;
+            }
+            .item-wrapper-list  {
+                &:hover {
+                    cursor: pointer;
+                    .item-list {
+                        animation: shake 0.5s;
+                        animation-iteration-count:1;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    .image-list-content {
+                        transition: all 0.5s ease-in-out;
+                        top: vw(30px);
+
+                    }
+                }
+            }
+
         }
     }
     .recruitment-process {

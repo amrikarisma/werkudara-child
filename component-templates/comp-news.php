@@ -26,7 +26,9 @@
                             <a class="news-item-link" href="<?php the_permalink(); ?>">
                                 <div class="news-overlay"></div>
                                 <img src="<?php echo $image[0]; ?>" />
-                                <h2 class="news-title"><?php the_title(); ?></h2>
+                                <div class="wrap-news-title">
+                                    <h2 class="news-title"><?php the_title(); ?></h2>
+                                </div>
                             </a>
                         </div>
                     <?php endforeach;

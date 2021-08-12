@@ -12,7 +12,7 @@ $container = get_theme_mod('bensemangat_container_type');
 
 ?>
 
-<section class="contact">
+<section class="section-element contact">
     <div class="<?php echo esc_attr($container); ?>">
 
         <div class="row">

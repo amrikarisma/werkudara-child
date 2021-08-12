@@ -34,7 +34,6 @@
         }
     }
     &.navbar-home {
-
         .navbar-nav {
             .active {
                 .nav-link {
@@ -42,25 +41,29 @@
                 }
             }
             .nav-link {
-                font-size: 23px;
-                @media(min-width: 992px) {
-                    padding: vw(70px) vw(30px) vw(10px) vw(30px);
-                    font-size: vw(23px);
-                }
+                font-size: 20px;
                 font-weight: 600;
                 text-transform: uppercase;
                 color: var(--main);
+                @media(min-width: 992px) {
+                    padding: vw(60px) vw(30px) vw(10px) vw(30px);
+                    font-size: vw(22px);
+                }
             }
         }
         a.navbar-brand.custom-logo-link {
             position: absolute;
             top: 0;
             left: 0;
+            @media (min-width: 992px) {
+                top: vw(40px);
+                left: vw(50px);
+            }
         }
         img {
-            max-width: 200px;
-            @media (max-width: 768px) {
-                max-width: 144px;
+            max-width: 50px;
+            @media (min-width: 992px) {
+                max-width: vw(100px);
             }
         }
     }
@@ -73,13 +76,13 @@
                 }
             }
             .nav-link {
-                font-size: 23px;
+                font-size: 20px;
                 color: var(--dark);
                 font-weight: 600;
                 text-transform: uppercase;
                 @media(min-width: 992px) {
-                    padding: vw(50px) vw(30px);
-                    font-size: vw(23px);
+                    padding: vw(50px) vw(30px) vw(40px) vw(30px);
+                    font-size: vw(22px);
                 }
             }
         }
@@ -87,11 +90,15 @@
             position: absolute;
             top: 0;
             left: 0;
+            @media (min-width: 992px) {
+                top: vw(25px);
+                left: vw(50px);
+            }
         }
         img {
-            max-width: 200px;
-            @media (max-width: 768px) {
-                max-width: 144px;
+            max-width: 50px;
+            @media (min-width: 992px) {
+                max-width: vw(90px);
             }
         }
     }
@@ -99,13 +106,19 @@
 
 header {
     text-align: center;
-    padding: 80px 10px;
+    padding: 30px 10px;
+    @media (min-width: 992px) {
+        padding: vw(60px) vw(10px) vw(10px) vw(10px);
+    }
     h1 {
         margin: 0;
         color: var(--black);
         position: relative;
         z-index: 11;
-        font-size: 48px;
+        font-size: 35px;
+        @media (min-width: 992px) {
+            font-size: 35px;
+        }
     }
     .entry-meta {
         display: none;

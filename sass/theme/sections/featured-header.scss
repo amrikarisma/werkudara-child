@@ -523,11 +523,11 @@ hr {
             width: 400px;
             @media(min-width: 992px) {
                 background-size: vw(1000px);
-                left: vw(-25px);
+                left: vw(-170px);
                 top: auto;
                 bottom: vw(390px);
                 height: vw(900px);
-                width: vw(400px);
+                width: vw(570px);
             }
         }
         #tree-2 {
@@ -572,7 +572,8 @@ hr {
         font-weight: bold;
         font-family: var(--font-headers), sans-serif;
         @media(min-width: 992px) {
-            font-size: vw(90px);
+            font-size: vw(80px);
+            letter-spacing: 3px;
         }
     }
     .text-content-section-6 {
@@ -583,9 +584,17 @@ hr {
         }
         p {
             margin-bottom: 20px;
-            font-weight: bold;
+            font-weight: 600;
             @media(min-width: 992px) {
                 margin-bottom: vw(30px);
+                letter-spacing: 1px;
+            }
+        }
+        .wrapper-icon {
+            color: var(--dark);
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
             }
         }
         svg {
@@ -609,7 +618,7 @@ hr {
     overflow: hidden;
     @media(min-width: 992px) {
         height: 900px;
-        padding-top: vw(90px);
+        padding-top: vw(140px);
         padding-bottom: vw(90px);
         height: vw(900px);
     }
@@ -798,13 +807,23 @@ hr {
 
     }
     .list-news-section-8 {
-        h2.news-title {
+        .wrap-news-title {
+            overflow: hidden;
+            padding: 10px 10px 10px 10px;
             position: absolute;
+            width: 80%;
             bottom: 10px;
+            @media(min-width: 992px) {
+                bottom: 10px;
+                width: 23vw;
+            }
+            @media(min-width: 1400px) {
+                width: 90%;
+            }
+        }
+        h2.news-title {
             color: #fff;
             text-align: left;
-            padding: 10px;
-            width: 80%;
             font-size: 17px;
             letter-spacing: 1px;
             overflow: hidden;
@@ -813,14 +832,9 @@ hr {
             -webkit-line-clamp: 2; /* number of lines to show */
             -webkit-box-orient: vertical;
             @media(min-width: 992px) {
-                width: 87%;
-                padding: 10px;
-                bottom: 10px;
-                font-size: vw(36px);
+                font-size: vw(26px);
             }
-            @media(min-width: 1400px) {
-                width: 90%;
-            }
+
         }
         .news-overlay {
             /* padding-bottom: 100px; */
@@ -832,6 +846,25 @@ hr {
                 180deg
                 , transparent, black);
             height: 50%;
+        }
+        .news-item-link {
+            &:hover {
+                .wrap-news-title { 
+                    padding: 10px 10px 3px 10px;
+                    top: -13px;
+                    bottom: inherit;
+                }
+                .news-overlay {
+                  top: 30px;
+                  left: 30px;
+                  right: 30px;
+                  bottom: 30px;
+                  background-color: var(--main);
+                  background-image: none;
+                  opacity: 0.8;
+                  height: inherit;
+                }
+            }
         }
     }
 }
@@ -852,6 +885,9 @@ hr {
             font-size: vw(70px);
             margin-bottom: vw(30px);
         }
+    }
+    h4 {
+        font-weight: 500;
     }
     .wrapper-deeper {
         background-image: url('https://werkudara.kerja.dev/wp-content/uploads/2021/08/159-1594304_view-our-services-iceberg.png') !important;
@@ -876,9 +912,10 @@ hr {
             }
             p {
                 font-size: 24px;
-                font-weight: 300;
+                font-weight: 400;
                 line-height: 30px;
                 letter-spacing: 1px;
+                opacity: 0.5;
                 @media(min-width: 992px) {
                     width: 60%;
                     font-size: vw(24px);
@@ -900,18 +937,27 @@ hr {
             }
             .wrap-logo-divein {
                 text-align: center;
+                font-weight: bold;
                 @media(min-width: 992px) {
                     text-align: left;
+                }
+                a {
+                    color: var(--white);
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 0.9;
+                    }
                 }
             }
             .footer-logo-dive {
                 font-size: 26px;
                 letter-spacing: 5px;
-                opacity: 0.8;
+                opacity: 0.5;
                 @media(min-width: 992px) {
                     font-size: vw(26px);
                     letter-spacing: vw(5px);
                 }
+
             }
         }
     }

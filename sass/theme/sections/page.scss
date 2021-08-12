@@ -1,7 +1,10 @@
 section {
     padding-top: 30px;
     padding-bottom: 30px;
-    // overflow: hidden;
+    @media (min-width: 992px) {
+        padding-top: vw(30px);
+        padding-bottom: vw(30px);
+    }
 }
 .action {
     margin-top: -50px;
@@ -214,8 +217,7 @@ section {
 }
 .contact {
     .form-wrapper {
-        background-color: #F5F8F2;
-        background-color: var(--gray);
+
     }
     .header {
         margin-top: 0px;

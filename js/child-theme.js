@@ -7162,6 +7162,10 @@ jQuery(".btn-close").on('click', function(e){
 // init Masonry
 
 jQuery(function ($) {
+  $('.readmore').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('.text-expandable').removeClass('wrap-content');
+  });
   if($('.section-element').length > 0) {
     $.scrollify({
       section : ".section-element",
