@@ -20057,82 +20057,82 @@ section {
     font-size: 0.8333333333vw;
   }
 }
-.career .text-content-career .list-content {
+.career .list-content {
   padding-top: 30px;
   padding-bottom: 40px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content {
+  .career .list-content {
     padding-top: 1.5625vw;
     padding-bottom: 2.0833333333vw;
   }
 }
-.career .text-content-career .list-content .category {
+.career .list-content .category {
   font-size: 20px;
   font-weight: bold;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .category {
+  .career .list-content .category {
     font-size: 1.3541666667vw;
   }
 }
-.career .text-content-career .list-content .image-list-content {
+.career .list-content .image-list-content {
   margin-top: 0;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .image-list-content {
+  .career .list-content .image-list-content {
     margin-top: -2.6041666667vw;
   }
 }
-.career .text-content-career .list-content .subtitle {
+.career .list-content .subtitle {
   font-size: 20px;
   font-weight: bold;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .subtitle {
+  .career .list-content .subtitle {
     font-size: 1.3541666667vw;
   }
 }
-.career .text-content-career .list-content .title {
+.career .list-content .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.career .text-content-career .list-content .title h3 {
+.career .list-content .title h3 {
   font-size: 36px;
   margin-top: 10px;
   letter-spacing: 1px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .title h3 {
+  .career .list-content .title h3 {
     margin-top: 0.5208333333vw;
     font-size: 3.59375vw;
   }
 }
-.career .text-content-career .list-content .title h4 {
+.career .list-content .title h4 {
   font-size: 34px;
   margin-top: 10px;
   letter-spacing: 1px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .title h4 {
+  .career .list-content .title h4 {
     margin-top: 0.5208333333vw;
     font-size: 3.125vw;
   }
 }
-.career .text-content-career .list-content .content {
+.career .list-content .content {
   font-size: 18px;
   letter-spacing: 1px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content {
+  .career .list-content .content {
     font-size: 1.1458333333vw;
   }
 }
-.career .text-content-career .list-content .content .readmore {
+.career .list-content .content .readmore {
   color: var(--alt);
 }
-.career .text-content-career .list-content .content .wrap-item-list {
+.career .list-content .content .wrap-item-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20143,14 +20143,14 @@ section {
   padding-top: 30px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .wrap-item-list {
+  .career .list-content .content .wrap-item-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
 }
-.career .text-content-career .list-content .content .wrap-item-list .item-list {
+.career .list-content .content .wrap-item-list .item-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20161,36 +20161,36 @@ section {
   padding-bottom: 20px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .wrap-item-list .item-list {
+  .career .list-content .content .wrap-item-list .item-list {
     padding-right: 1.0416666667vw;
   }
 }
-.career .text-content-career .list-content .content .wrap-item-list .item-list .item-number {
+.career .list-content .content .wrap-item-list .item-list .item-number {
   padding-right: 14px;
   font-weight: bold;
   font-size: 34px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .wrap-item-list .item-list .item-number {
+  .career .list-content .content .wrap-item-list .item-list .item-number {
     font-size: 1.7708333333vw;
     padding-right: 0.7291666667vw;
   }
 }
-.career .text-content-career .list-content .content .wrap-item-list .item-list .item-content {
+.career .list-content .content .wrap-item-list .item-list .item-content {
   font-style: italic;
   padding-top: 5px;
 }
-.career .text-content-career .list-content .content .team-career {
+.career .list-content .content .team-career {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career {
+  .career .list-content .content .team-career {
     padding-top: 2.6041666667vw;
     padding-bottom: 2.6041666667vw;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider {
+.career .list-content .content .team-career .box-content-slider {
   background-color: #fff;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -20198,13 +20198,13 @@ section {
   margin-right: 30px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider {
+  .career .list-content .content .team-career .box-content-slider {
     font-size: inherit;
     margin-left: 0;
     margin-right: 0;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider .contract {
+.career .list-content .content .team-career .box-content-slider .contract {
   background-color: var(--main);
   width: 100%;
   color: var(--white);
@@ -20213,43 +20213,43 @@ section {
   font-size: 16px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider .contract {
+  .career .list-content .content .team-career .box-content-slider .contract {
     padding: 0.5208333333vw 1.0416666667vw;
     font-size: inherit;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider .position {
+.career .list-content .content .team-career .box-content-slider .position {
   font-weight: bold;
   padding: 20px 20px 0 20px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider .position {
+  .career .list-content .content .team-career .box-content-slider .position {
     padding: 2.0833333333vw 1.0416666667vw 0 1.0416666667vw;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider h3.title {
+.career .list-content .content .team-career .box-content-slider h3.title {
   margin: 0;
   padding: 20px 20px;
   font-size: 32px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider h3.title {
+  .career .list-content .content .team-career .box-content-slider h3.title {
     padding: 1.0416666667vw;
     font-size: 2.1875vw;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider .requirement {
+.career .list-content .content .team-career .box-content-slider .requirement {
   padding: 0 20px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider .requirement {
+  .career .list-content .content .team-career .box-content-slider .requirement {
     padding: 1.0416666667vw;
   }
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider .requirement p {
+.career .list-content .content .team-career .box-content-slider .requirement p {
   font-weight: bold;
 }
-.career .text-content-career .list-content .content .team-career .box-content-slider .requirement a {
+.career .list-content .content .team-career .box-content-slider .requirement a {
   margin-top: 10px;
   margin-left: 20px;
   border-radius: 20px;
@@ -20257,7 +20257,7 @@ section {
   font-size: 14px;
 }
 @media (min-width: 992px) {
-  .career .text-content-career .list-content .content .team-career .box-content-slider .requirement a {
+  .career .list-content .content .team-career .box-content-slider .requirement a {
     margin-top: 0.5208333333vw;
     margin-left: 1.0416666667vw;
     border-radius: 1.3020833333vw;

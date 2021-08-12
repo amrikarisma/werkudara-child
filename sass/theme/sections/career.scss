@@ -39,168 +39,166 @@
             }
         }
     }
-    .text-content-career {
-        .list-content {
-            padding-top: 30px;
-            padding-bottom: 40px;
+    .list-content {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        @media (min-width: 992px) {
+            padding-top: vw(30px);
+            padding-bottom: vw(40px);
+        }
+        .category {
+            font-size: 20px;
+            font-weight: bold;
             @media (min-width: 992px) {
-                padding-top: vw(30px);
-                padding-bottom: vw(40px);
+                font-size: vw(26px);
             }
-            .category {
-                font-size: 20px;
-                font-weight: bold;
-                @media (min-width: 992px) {
-                    font-size: vw(26px);
-                }
+        }
+        .image-list-content {
+            margin-top: 0;
+            @media (min-width: 992px) {
+                margin-top: vw(-50px);
             }
-            .image-list-content {
-                margin-top: 0;
-                @media (min-width: 992px) {
-                    margin-top: vw(-50px);
-                }
+        }
+        .subtitle {
+            font-size: 20px;
+            font-weight: bold;
+            @media (min-width: 992px) {
+                font-size: vw(26px);
             }
-            .subtitle {
-                font-size: 20px;
-                font-weight: bold;
-                @media (min-width: 992px) {
-                    font-size: vw(26px);
-                }
-            }
-            .title {
-                display: flex;
-                h3 {
-                    font-size: 36px;
-                    margin-top: 10px;
-                    letter-spacing: 1px;
-                    @media (min-width: 992px) {
-                        margin-top: vw(10px);
-                        font-size: vw(69px);
-                    }
-                }
-                h4 {
-                    font-size: 34px;
-                    margin-top: 10px;
-                    letter-spacing: 1px;
-                    @media (min-width: 992px) {
-                        margin-top: vw(10px);
-                        font-size: vw(60px);
-                    }
-                }
-            }
-            .content {
-                font-size: 18px;
+        }
+        .title {
+            display: flex;
+            h3 {
+                font-size: 36px;
+                margin-top: 10px;
                 letter-spacing: 1px;
                 @media (min-width: 992px) {
-                    font-size: vw(22px);
+                    margin-top: vw(10px);
+                    font-size: vw(69px);
                 }
-                .readmore {
-                    color: var(--alt);
-                }
-
-                .wrap-item-list {
-                    display: flex;
-                    flex-direction: column;
-                    padding-top: 30px;
-                    @media (min-width: 992px) {
-                        flex-direction: row;
-                    }
-                    .item-list {
-                        display: flex;
-                        align-items: flex-start;
-                        padding-right: 20px;
-                        padding-bottom: 20px;
-                        @media (min-width: 992px) {
-                            padding-right: vw(20px);
-                        }
-                        .item-number {
-                            padding-right: 14px;
-                            font-weight: bold;
-                            font-size: 34px;
-                            @media (min-width: 992px) {
-                                font-size: vw(34px);
-                                padding-right: vw(14px);
-                            }
-                        }
-                        .item-content {
-                            font-style: italic;
-                            padding-top: 5px;
-                        
-                        }
-                    }
-                }
-
-                .team-career {
-                    padding-top: 50px;
-                    padding-bottom: 50px;
-                    @media (min-width: 992px) {
-                        padding-top: vw(50px);
-                        padding-bottom: vw(50px);
-                    }
-                    .box-content-slider {
-                        background-color: #fff;
-                        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
-                        margin-left: 30px;
-                        margin-right: 30px;
-                        @media (min-width: 992px) {
-                            font-size: inherit;
-                            margin-left: 0;
-                            margin-right: 0;
-                        }
-                        .contract {
-                            background-color: var(--main);
-                            width: 100%;
-                            color: var(--white);
-                            padding:10px 20px;
-                            font-weight: bold;
-                            font-size: 16px;
-                            @media (min-width: 992px) {
-                                padding:vw(10px) vw(20px);
-                                font-size: inherit;
-                            }
-                        }
-                        .position {
-                            font-weight: bold;
-                            padding:20px 20px 0 20px;
-                            @media (min-width: 992px) {
-                                padding:vw(40px) vw(20px) 0 vw(20px);
-                            }
-                        }
-                        h3.title {
-                            margin: 0;
-                            padding: 20px 20px;
-                            font-size: 32px;
-                            @media (min-width: 992px) {
-                                padding:vw(20px);
-                                font-size: vw(42px);
-                            }
-                        }
-                        .requirement {
-                            padding: 0 20px;
-                            @media (min-width: 992px) {
-                                padding:vw(20px);
-                            }
-                            p {
-                                font-weight: bold;
-                            }
-                            a {
-                                margin-top: 10px;
-                                margin-left: 20px;
-                                border-radius: 20px;
-                                border-width: 1px;
-                                font-size: 14px;
-                                @media (min-width: 992px) {
-                                    margin-top: vw(10px);
-                                    margin-left: vw(20px);
-                                    border-radius: vw(25px);
-                                    font-size: vw(20px);
-                                }
-                            }
-                        }
-                    }
-                }
-                
             }
+            h4 {
+                font-size: 34px;
+                margin-top: 10px;
+                letter-spacing: 1px;
+                @media (min-width: 992px) {
+                    margin-top: vw(10px);
+                    font-size: vw(60px);
+                }
+            }
+        }
+        .content {
+            font-size: 18px;
+            letter-spacing: 1px;
+            @media (min-width: 992px) {
+                font-size: vw(22px);
+            }
+            .readmore {
+                color: var(--alt);
+            }
+
+            .wrap-item-list {
+                display: flex;
+                flex-direction: column;
+                padding-top: 30px;
+                @media (min-width: 992px) {
+                    flex-direction: row;
+                }
+                .item-list {
+                    display: flex;
+                    align-items: flex-start;
+                    padding-right: 20px;
+                    padding-bottom: 20px;
+                    @media (min-width: 992px) {
+                        padding-right: vw(20px);
+                    }
+                    .item-number {
+                        padding-right: 14px;
+                        font-weight: bold;
+                        font-size: 34px;
+                        @media (min-width: 992px) {
+                            font-size: vw(34px);
+                            padding-right: vw(14px);
+                        }
+                    }
+                    .item-content {
+                        font-style: italic;
+                        padding-top: 5px;
+                    
+                    }
+                }
+            }
+
+            .team-career {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                @media (min-width: 992px) {
+                    padding-top: vw(50px);
+                    padding-bottom: vw(50px);
+                }
+                .box-content-slider {
+                    background-color: #fff;
+                    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+                    margin-left: 30px;
+                    margin-right: 30px;
+                    @media (min-width: 992px) {
+                        font-size: inherit;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    .contract {
+                        background-color: var(--main);
+                        width: 100%;
+                        color: var(--white);
+                        padding:10px 20px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        @media (min-width: 992px) {
+                            padding:vw(10px) vw(20px);
+                            font-size: inherit;
+                        }
+                    }
+                    .position {
+                        font-weight: bold;
+                        padding:20px 20px 0 20px;
+                        @media (min-width: 992px) {
+                            padding:vw(40px) vw(20px) 0 vw(20px);
+                        }
+                    }
+                    h3.title {
+                        margin: 0;
+                        padding: 20px 20px;
+                        font-size: 32px;
+                        @media (min-width: 992px) {
+                            padding:vw(20px);
+                            font-size: vw(42px);
+                        }
+                    }
+                    .requirement {
+                        padding: 0 20px;
+                        @media (min-width: 992px) {
+                            padding:vw(20px);
+                        }
+                        p {
+                            font-weight: bold;
+                        }
+                        a {
+                            margin-top: 10px;
+                            margin-left: 20px;
+                            border-radius: 20px;
+                            border-width: 1px;
+                            font-size: 14px;
+                            @media (min-width: 992px) {
+                                margin-top: vw(10px);
+                                margin-left: vw(20px);
+                                border-radius: vw(25px);
+                                font-size: vw(20px);
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
     }
     .recruitment-process {
