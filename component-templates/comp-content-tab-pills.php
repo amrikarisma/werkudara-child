@@ -1,5 +1,5 @@
 <div class="section-element recruitment-process">
-    <h3 data-aos="fade-up" data-aos-delay="200"><?php echo get_sub_field('subtitle'); ?></h3>
+    <h3 data-aos="fade-up" data-aos-delay="200"><?php echo get_sub_field('title'); ?></h3>
     <div class="container">
         <div class="wrapper-content-recruitment">
             <ul class="nav nav-pills tab-box-recruitment" id="pills-tab" role="tablist" data-aos="fade-up" data-aos-delay="200">

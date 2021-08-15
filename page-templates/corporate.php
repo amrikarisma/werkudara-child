@@ -15,6 +15,7 @@ defined('ABSPATH') || exit;
 get_header('company');
 
 get_template_part('component-templates/comp', 'our-company');
+get_template_part('component-templates/comp', 'team-detail');
 get_template_part('component-templates/comp', 'footer-information');
 
 get_footer();

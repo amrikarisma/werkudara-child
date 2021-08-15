@@ -50,7 +50,7 @@
             padding-bottom: vw(40px);
         }
         .category {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: bold;
             @media (min-width: 992px) {
                 font-size: vw(26px);
@@ -72,7 +72,7 @@
         .title {
             display: flex;
             h3 {
-                font-size: 36px;
+                font-size: 22px;
                 margin-top: 10px;
                 letter-spacing: 1px;
                 @media (min-width: 992px) {
@@ -81,7 +81,7 @@
                 }
             }
             h4 {
-                font-size: 34px;
+                font-size: 22px;
                 margin-top: 10px;
                 letter-spacing: 1px;
                 @media (min-width: 992px) {
@@ -91,7 +91,7 @@
             }
         }
         .content {
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 1px;
             @media (min-width: 992px) {
                 font-size: vw(22px);
@@ -192,11 +192,17 @@
                             border-radius: 20px;
                             border-width: 1px;
                             font-size: 14px;
+                            color: var(--dark);
+                            border:1px solid var(--secondary);
                             @media (min-width: 992px) {
                                 margin-top: vw(10px);
                                 margin-left: vw(20px);
                                 border-radius: vw(25px);
                                 font-size: vw(20px);
+                            }
+                            &:hover {
+                                color: var(--white);
+                                border: inherit;
                             }
                         }
                     }
@@ -214,7 +220,7 @@
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                padding-bottom: 20px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -226,15 +232,22 @@
             padding-top: vw(60px);
         }
         .title {
-            width: 60vw;
+            width: 55vw;
+            @media (min-width: 992px) {
+                width: 60vw;
+            }
         }
         .wrap-item-list {
             .image-list-content {
                 position: absolute;
                 top: -1000px;
-                right: 9vw;
-                width: 250px;
+                right: -5px;
+                width: 170px;
                 transition: all 0.5s ease-in-out;
+                @media (min-width: 992px) {
+                    right: 9vw;
+                    width: 250px;
+                }
             }
             .item-wrapper-list  {
                 &:hover {
@@ -246,7 +259,10 @@
                     }
                     .image-list-content {
                         transition: all 0.5s ease-in-out;
-                        top: vw(30px);
+                        top: 80px;
+                        @media (min-width: 992px) {
+                            top: vw(30px);
+                        }
 
                     }
                 }
@@ -265,10 +281,9 @@
         }
         h3 {
             text-align: center;
-            font-size: 40px;
+            font-size: 28px;
             padding-bottom: 30px;
-            color: var(--black);
-            color: var(--secondary);
+            color: var(--dark);
             letter-spacing: 1px;
             // background-color: #D3D4D8;
             @media(min-width: 992px) {
@@ -281,7 +296,7 @@
             flex-direction: column;
             align-items: center;
             .title-recruitment-tab {
-                font-size: 20px;
+                font-size: 15px;
                 font-weight: bold;
                 @media(min-width: 992px) {
                     font-size: vw(25px);
@@ -323,7 +338,8 @@
                 color: var(--white);
             }
             .content-recruitment-tab {
-                background-color: #fff;   
+                background-color: #fff;  
+                border-radius: 25px; 
                 .tab-content-title-recruitment {
                     width: 150%;
                     font-size: 25px;
@@ -341,8 +357,16 @@
                         @media (min-width: 992px) {
                             padding: vw(30px) vw(20px) vw(30px) vw(50px);
                         }
+                        &:first-child {
+                            border-top-left-radius: 25px;
+    
+                        }
+                        &:last-child {
+                            border-bottom-left-radius: 25px;
+                        }
                         &.active {
                             background-color: #F3F3F3;
+
                         }
                         .count {
                             width: 50px;

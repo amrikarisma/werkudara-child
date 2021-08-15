@@ -21,40 +21,41 @@ $container = get_theme_mod('bensemangat_container_type');
     <div class="wrapper copyright-wrap" id="wrapper-footer">
 
         <div class="<?php echo esc_attr($container); ?>">
-            <div class="menu-footer-wrapper">
-                <ul class="navbar-nav">
-                    <li class="menu-item"><a class="nav-link" href="#">Download Company Profile</a></li>
-                    <li class="menu-item"><a class="nav-link" href="#">Request for Proposal</a></li>
-                    <li class="menu-item"><a class="nav-link" href="#">Become our Partner</a></li>
-                    <li class="menu-item"><a class="nav-link" href="#">Apply for a Job/ Internship</a></li>
-                </ul>
-                <ul class="navbar-nav right">
-                    <li class="menu-item"><a class="nav-link" href="#">Terms of Use</a></li>
-                    <li class="menu-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="menu-bottom-footer-wrapper">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'  => 'primary',
-                        'container_class' => '',
-                        'container_id'    => '',
-                        'menu_class'      => 'navbar-nav',
-                        'fallback_cb'     => '',
-                        'menu_id'         => 'primary-menu',
-                        'depth'           => 2,
-                        'walker'          => new Bensemangat_WP_Bootstrap_Navwalker(),
-                    )
-                );
-                ?>
+            <div class="all-footer-menu-wrapper">
+                <div class="menu-footer-wrapper">
+                    <ul class="navbar-nav">
+                        <li class="menu-item"><a class="nav-link" href="#">Download Company Profile</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Request for Proposal</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Become our Partner</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Apply for a Job/ Internship</a></li>
+                    </ul>
+                    <ul class="navbar-nav right">
+                        <li class="menu-item"><a class="nav-link" href="#">Terms of Use</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="menu-bottom-footer-wrapper">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location'  => 'primary',
+                            'container_class' => '',
+                            'container_id'    => '',
+                            'menu_class'      => 'navbar-nav',
+                            'fallback_cb'     => '',
+                            'menu_id'         => 'primary-menu',
+                            'depth'           => 2,
+                        )
+                    );
+                    ?>
+                </div>
             </div>
 
             <div class="row">
 
                 <div class="col-md-12">
                     <div class="copyright">
-                        Copyright 2019 PT. Werkudara Nirwana Sakti. All rights reserved.
+                        Copyright <?php the_date('Y'); ?> PT. Werkudara Nirwana Sakti. All rights reserved.
                     </div>
 
                 </div>

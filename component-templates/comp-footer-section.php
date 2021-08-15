@@ -4,7 +4,7 @@
             <h3 data-aos="fade-left" data-aos-delay="300"><?php echo get_sub_field('title'); ?></h3>
         </div>
     </div>
-    <div class="wrapper-deeper">
+    <div class="wrapper-deeper" style="background-image: url('https://werkudara.test/wp-content/uploads/2021/08/Gunung-Es.png');">
         <div class="deeper">
             <div class="container">
                 <h4 data-aos="fade-in" data-aos-delay="400"><?php echo get_sub_field('subtitle'); ?></h4>

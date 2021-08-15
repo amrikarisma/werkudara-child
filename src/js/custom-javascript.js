@@ -110,7 +110,7 @@ jQuery(function ($) {
       setHeights: false,
       overflowScroll: true,
       updateHash: true,
-      touchScroll:true,
+      touchScroll:false,
       interstitialSection:"#wrapper-navbar,footer"
     });
   }

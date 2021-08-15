@@ -30,7 +30,10 @@
                                                 <?php endwhile; ?>
                                             </ul>
                                         <?php endif; ?>
-                                        <a class="btn btn-outline-primary" href="#">LEARN MORE</a>
+                                        <?php $button = get_sub_field('button'); ?>
+                                        <?php if ($button) : ?>
+                                            <a class="btn btn-outline-primary" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>"><?php echo esc_html($button['title']); ?></a>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
