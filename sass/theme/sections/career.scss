@@ -253,8 +253,6 @@
                 &:hover {
                     cursor: pointer;
                     .item-list {
-                        animation: shake 0.5s;
-                        animation-iteration-count:1;
                         transition: all 0.5s ease-in-out;
                     }
                     .image-list-content {

@@ -8,7 +8,7 @@
                         <?php echo get_sub_field('content'); ?>
                         <?php $button = get_sub_field('button'); ?>
                         <?php if ($button) : ?>
-                            <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="1000"><?php echo esc_html($button['title']); ?></a>
+                            <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                                 <button class="button-view rounded-circle" data-aos="fade-in" data-aos-delay="1200">View</button>
                             </div>
                             <!-- Slider main container -->
-                            <div class="swiper-container team">
+                            <div class="swiper-container team" data-aos="fade-left" data-aos-delay="1200">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <?php while (have_rows('list')) : the_row(); ?>
@@ -28,7 +28,7 @@
                                         <!-- Slides -->
                                         <div class="swiper-slide" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image ? esc_url($image['url']) : ''; ?>');
                                         ">
-                                            <div class="box-content-slider" data-aos="fade-left" data-aos-delay="300">
+                                            <div class="box-content-slider">
                                                 <div class="name"><?php echo get_sub_field('title'); ?></div>
                                                 <div class="position"><?php echo get_sub_field('subtitle'); ?></div>
                                                 <div class="caption"><?php echo get_sub_field('caption'); ?></div>
@@ -37,6 +37,9 @@
 
                                         <!-- End Slides -->
                                     <?php endwhile; ?>
+                                    <div class="swiper-slide d-flex">
+                                        <button class="btn btn-primary align-self-center">MEET MORE</button>
+                                    </div>
                                 </div>
 
                                 <!-- If we need navigation buttons -->

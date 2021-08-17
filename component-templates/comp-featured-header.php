@@ -9,17 +9,11 @@
             <?php endif ?>
         <?php endif; ?>
     <?php endwhile; ?>
-<?php else : ?>
-    <?php // no layouts found 
-    ?>
 <?php endif; ?>
 <div class="section-featured-home" id="home_featured_section" style="
     background-image: url('<?php echo $url[0]; ?>'), 
     url('<?php echo $url[1] ?? ''; ?>'), 
-    url('<?php echo $url[2] ?? ''; ?>'),
-    url('<?php echo $url[3] ?? ''; ?>'),
-    url('<?php echo $url[4] ?? ''; ?>'),
-    url('<?php echo $url[5] ?? ''; ?>');
+    url('<?php echo $url[2] ?? ''; ?>')
     ">
     <div class="section-element section-home-1" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
         <div class="text-featured-header-float">

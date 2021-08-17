@@ -32,7 +32,7 @@
                                         <?php endif; ?>
                                         <?php $button = get_sub_field('button'); ?>
                                         <?php if ($button) : ?>
-                                            <a class="btn btn-outline-primary" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>"><?php echo esc_html($button['title']); ?></a>
+                                            <a class="btn btn-outline-primary" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
                                         <?php endif; ?>
                                     </div>
                                 </div>

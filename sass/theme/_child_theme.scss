@@ -103,7 +103,7 @@ a:focus {
     text-decoration: none;
 }
 .container {
-    @media (min-width: 1200px) and (max-width: 1400px) {
+    @media (min-width: 1200px) and (max-width: 1500px) {
         max-width: 1140px;
     }
 }
@@ -122,25 +122,25 @@ label {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
-input[type="submit"], button {
+input[type=submit], button {
     -webkit-background-clip: border-box !important;
     -moz-background-clip: border-box !important;
     background-clip: border-box !important;
 }
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button, html input[type="button"], input[type="reset"], input[type=submit] {
     -webkit-appearance: button;
     cursor: pointer;
 }
 .button.btn-default:hover, 
-input[type="button"].btn-default:hover, 
-input[type="submit"].btn-default:hover, 
+input[type=button].btn-default:hover, 
+input[type=submit].btn-default:hover, 
 .btn.btn-default:hover,
-input[type="submit"].wpcf7-submit:hover {
+input[type=submit].wpcf7-submit:hover {
     background-color: var(--black);
     color: var(--white);
 }
 
-.button.btn-black, input[type="button"].btn-black, input[type="submit"].btn-black, .btn.btn-black {
+.button.btn-black, input[type="button"].btn-black, input[type=submit].btn-black, .btn.btn-black {
     color: var(--white);
     background-color: #252C30;
     background-color: var(--black);
@@ -218,7 +218,6 @@ input[type="submit"],
     -webkit-background-clip: border-box;
     -moz-background-clip: border-box;
     background-clip: border-box;
-    color: #fff;
     color: var(--white);
     background-color: var(--main);
 }
@@ -296,7 +295,7 @@ input[type="button"],
     border-color: var(--main);
     &:hover {
         color: var(--main);
-        background-color: var(--white);
+        background-color: transparent;
         border-color: var(--main);
     }
 }

@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 
         <?php the_title('<h1 class="entry-title">', '</h1>');
         ?>
-        <a href="#" class="btn btn-outline-primary">Apply Now</a>
+        <a href="#" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="2000">Apply Now</a>
 
     </header>
 
@@ -31,7 +31,7 @@ defined('ABSPATH') || exit;
 
     <footer class="entry-footer">
 
-        <a href="#" class="btn btn-secondary">Learn how to apply</a>
+        <a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="2000">Learn how to apply</a>
 
     </footer><!-- .entry-footer -->
 

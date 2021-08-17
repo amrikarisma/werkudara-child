@@ -8,7 +8,7 @@
                         <?php echo get_sub_field('content'); ?>
                         <?php $button = get_sub_field('button'); ?>
                         <?php if ($button) : ?>
-                            <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="1000"><?php echo esc_html($button['title']); ?></a>
+                            <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
                         <?php endif; ?>
                     </div>
                 </div>

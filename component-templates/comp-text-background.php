@@ -1,6 +1,6 @@
 <div class="section-element section-home-6" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="wrapper-section-home-6" style="background-image:linear-gradient(<?php echo get_sub_field('background'); ?>,<?php echo get_sub_field('background'); ?>);">
-        <div data-aos="fade-left" data-aos-delay="1200" id="tree-1" class="tree" style="background-image:url('/wp-content/uploads/2021/08/pohon-true-value-1.png');
+        <div data-aos="fade-left" data-aos-delay="1200" id="tree-1" class="tree" style="background-image:url('/wp-content/uploads/2021/08/pohon-true-value-2.png');
 
                 "></div>
         <div data-aos="fade-up" data-aos-delay="600" id="tree-2" class="tree" style="background-image:url('/wp-content/uploads/2021/08/pohon-true-value-1.png');

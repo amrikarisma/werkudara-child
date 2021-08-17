@@ -17,14 +17,24 @@
 .navbar {
     ul>li.nav-item {
         a {
+            @media (min-width:992px) {
+                text-align: center;
+            }
             &::after {
-                display: block;
-                margin-top: 20px;
-                background-image: url('https://werkudara.test/wp-content/uploads/2021/08/line-bawah-menu.png');
-                background-size: 81px;
-                background-repeat: no-repeat;
-                width: 200px;
-                height: 50px;
+                @media (max-width: 991px) {
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    vertical-align: middle;
+                    content: "\f105";
+                    font-weight: 400;
+                    margin: 4px 0 0 6px;
+                    position: absolute;
+                    transition: color 0.5s ease;
+                }
             }
         }
     }
@@ -43,6 +53,28 @@
                 @media(min-width: 992px) {
                     padding: vw(60px) vw(30px) vw(10px) vw(30px);
                     font-size: vw(22px);
+                }
+                &::after {
+                    @media (min-width:992px) {
+                        opacity: 0;
+                        display: block;
+                        content: "";
+                        margin: vw(20px) auto vw(15px) auto;
+                        background-image: url('../img/menu-line.png');
+                        background-size: vw(80px);
+                        background-repeat: no-repeat;
+                        width: vw(80px);
+                        height: vw(30px);
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    &::after {
+                        @media (min-width:992px) {
+                            opacity: 1;
+                            transition: all .3s ease-in-out;
+                        }
+                    }
                 }
             }
         }

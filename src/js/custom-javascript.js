@@ -16,7 +16,7 @@ AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
   delay: 200, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
   easing: 'ease', // default easing for AOS animations
   once: false, // whether animation should happen only once - while scrolling down
   mirror: false, // whether elements should animate out while scrolling past them
@@ -24,6 +24,7 @@ AOS.init({
 });
 
 var homepage = new Swiper('.homepage', {
+  watchOverflow:true,
   loop: true,
   autoplay:true,
   zoom: true,
@@ -38,6 +39,7 @@ var homepage = new Swiper('.homepage', {
 });
 
 var team = new Swiper('.team', {
+  watchOverflow:true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -54,6 +56,7 @@ var team = new Swiper('.team', {
 var swiper = new Swiper(".swiper-client-logo", {
   observer: true,
   observeParents: true,
+  watchOverflow:true,
   slidesPerView: 5,
   slidesPerColumn: 4,
   slidesPerColumnFill: 'row',
@@ -65,6 +68,7 @@ var swiper = new Swiper(".swiper-client-logo", {
 });
 
 var teamCareer = new Swiper('.team-career', {
+  watchOverflow:true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -111,7 +115,7 @@ jQuery(function ($) {
       overflowScroll: true,
       updateHash: true,
       touchScroll:false,
-      interstitialSection:"#wrapper-navbar,footer"
+      interstitialSection:"#wrapper-navbar,#content,footer"
     });
   }
 
@@ -135,12 +139,19 @@ jQuery(function ($) {
   }
 
   $('#home_featured_section').mousemove(function(e){
-    var amountMovedX = (e.pageX * -1 / 6)+200;
-    var amountMovedY = (e.pageY * -1 / 6)+200;
+    var movementStrength = 25;
+    var height = movementStrength / $(window).height();
+    var width = movementStrength / $(window).width();
+    var pageX = e.pageX - ($(window).width() / 2);
+    var pageY = e.pageY - ($(window).height() / 2);
+    var newvalueX = width * pageX * -1 - (-200);
+    var newvalueY = height * pageY * -1 - (0);
+    var bgPosition = $(this).css('background-position').split(", ");
+    bgPosition[1] = newvalueX+'px '+newvalueY+'px';
     $(this).css({
-      // 'background-position': 'top 300px left 100px, '+amountMovedY+'px '+amountMovedX+'px, top 200px left 50px, top 970px right,top 970px right -300px, top 1000px right'
+      'background-position': bgPosition
     });
-    console.log($(this).css('background-position'));
+    // console.log($(this).css('background-position'));
     // $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
   });
 

@@ -8,24 +8,27 @@
             <?php if (have_rows('list')) : ?>
                 <div class="list-feature-section-3">
                     <div class="row">
-                        <?php $bussinessCount = 400; ?>
+                        <?php $bussinessCount = 325; ?>
                         <?php while (have_rows('list')) : the_row(); ?>
                             <div class="col-6 col-md align-self-end item-featured" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
-                                <?php $image = get_sub_field('image'); ?>
-                                <?php if ($image) : ?>
-                                    <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                                <?php endif; ?>
-
                                 <?php $link = get_sub_field('link'); ?>
                                 <?php if ($link) : ?>
                                     <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>">
+                                        <?php $image = get_sub_field('image'); ?>
+                                        <?php if ($image) : ?>
+                                            <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                        <?php endif; ?>
                                         <h4><?php the_sub_field('title'); ?></h4>
                                     </a>
                                 <?php else : ?>
+                                    <?php $image = get_sub_field('image'); ?>
+                                    <?php if ($image) : ?>
+                                        <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                    <?php endif; ?>
                                     <h4><?php the_sub_field('title'); ?></h4>
                                 <?php endif; ?>
                             </div>
-                            <?php $bussinessCount = $bussinessCount * 1.5; ?>
+                            <?php $bussinessCount = $bussinessCount * 2; ?>
                         <?php endwhile; ?>
                     </div>
                 </div>
