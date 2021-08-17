@@ -106,7 +106,7 @@
                 padding-top: 120px;
                 @media (min-width: 992px) {
                     flex-direction: row;
-                    padding-top: vw(120px);
+                    padding-top: vw(300px);
                 }
                 .item-list {
                     display: flex;
@@ -231,41 +231,74 @@
         @media(min-width: 992px) {
             padding-top: vw(60px);
         }
-        .title {
-            width: 55vw;
-            @media (min-width: 992px) {
-                width: 60vw;
-            }
-        }
+
         .wrap-item-list {
-            .image-list-content {
-                position: absolute;
-                top: -1000px;
-                right: -5px;
-                width: 170px;
-                transition: all 0.5s ease-in-out;
-                @media (min-width: 992px) {
-                    right: 9vw;
-                    width: 250px;
-                }
-            }
             .item-wrapper-list  {
-                &:hover {
-                    cursor: pointer;
-                    .item-list {
-                        transition: all 0.5s ease-in-out;
+                .title {
+                    position: absolute;
+                    top: 0;
+                    left: 11vw;
+                    width: 52vw;
+                    opacity: 0;
+                    @media (min-width: 992px) {
+                        width: 60vw;
+                        left: 11vw;
+                    }
+                }
+                .image-list-content {
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -5px;
+                    width: 170px;
+                    transition: all 0.5s ease-in-out;
+                    @media (min-width: 992px) {
+                        top: vw(30px);
+                        right: 9vw;
+                        width: 250px;
+                    }
+                }
+                &:first-child:not(:hover) {
+                    .title {
+                        opacity: 1;
                     }
                     .image-list-content {
-                        transition: all 0.5s ease-in-out;
-                        top: 80px;
-                        @media (min-width: 992px) {
-                            top: vw(30px);
-                        }
-
+                        opacity: 1;
                     }
                 }
             }
-
+            &:hover {
+                .item-wrapper-list {
+                    &:first-child {
+                        .title {
+                            opacity: 0;
+                        }
+                        .image-list-content {
+                            opacity: 0;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        
+                        .title {
+                            opacity: 1;
+                            transition: all 0.5s ease-in-out;
+                        }
+                        .item-list {
+                            transition: all 0.5s ease-in-out;
+                        }
+                        .image-list-content {
+                            transition: all 0.5s ease-in-out;
+                            opacity: 1;
+                            top: 0;
+                            @media (min-width: 992px) {
+                                top: vw(30px);
+                            }
+    
+                        }
+                    }
+                }
+            }
         }
     }
     .recruitment-process {
