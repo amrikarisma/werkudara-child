@@ -67,6 +67,20 @@ h3.heading {
                     padding: vw(50px);
                     font-size: vw(28px);
                 }
+                #accordion {
+                    .card {
+                        margin-bottom: 20px;
+                        border-radius: 25px;
+                        .card-header {
+                            background-color: transparent;
+                            border-bottom: none;
+                        }
+                        .card-body {
+                            padding-top: 0;
+                            font-size: 14px;
+                        }
+                    }
+                }
                 .wrap-image {
                     justify-content: center;
                     align-items: center;
@@ -75,20 +89,7 @@ h3.heading {
                 }
             }
         }
-        .accordion {
-            .card {
-                margin-bottom: 20px;
-                border-radius: 25px;
-                .card-header {
-                    background-color: transparent;
-                    border-bottom: none;
-                }
-                .card-body {
-                    padding-top: 0;
-                    font-size: 14px;
-                }
-            }
-        }
+
         #v-pills-what-we-do {
             .content-tab-pane {
                 background-color: transparent;

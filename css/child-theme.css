@@ -19825,6 +19825,18 @@ h3.heading span {
     font-size: 1.4583333333vw;
   }
 }
+.our-company-1 .wrap-company-list-tab .company-content-tab .content-tab-pane #accordion .card {
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+.our-company-1 .wrap-company-list-tab .company-content-tab .content-tab-pane #accordion .card .card-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+.our-company-1 .wrap-company-list-tab .company-content-tab .content-tab-pane #accordion .card .card-body {
+  padding-top: 0;
+  font-size: 14px;
+}
 .our-company-1 .wrap-company-list-tab .company-content-tab .content-tab-pane .wrap-image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -19837,18 +19849,6 @@ h3.heading span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.our-company-1 .wrap-company-list-tab .accordion .card {
-  margin-bottom: 20px;
-  border-radius: 25px;
-}
-.our-company-1 .wrap-company-list-tab .accordion .card .card-header {
-  background-color: transparent;
-  border-bottom: none;
-}
-.our-company-1 .wrap-company-list-tab .accordion .card .card-body {
-  padding-top: 0;
-  font-size: 14px;
 }
 .our-company-1 .wrap-company-list-tab #v-pills-what-we-do .content-tab-pane {
   background-color: transparent;
