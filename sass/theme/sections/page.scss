@@ -475,3 +475,17 @@ section {
         }
     }
 }
+
+.wrap-featured-image {
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    @media (min-width: 992px) {
+        height: vw(450px);
+        margin-bottom: vw(100px);
+    }
+    img {
+        width: 100%;
+        height: fit-content;
+    }
+}

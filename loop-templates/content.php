@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Post rendering content according to caller of get_template_part
  *
@@ -6,24 +7,24 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-$container = get_theme_mod( 'bensemangat_container_type' );
+defined('ABSPATH') || exit;
+$container = get_theme_mod('bensemangat_container_type');
 
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
-        <div class="<?php echo esc_attr( $container ); ?>">
+    <header class="entry-header">
+        <div class="<?php echo esc_attr($container); ?>">
 
             <?php
             the_title(
-                sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())),
                 '</a></h2>'
             );
             ?>
 
-            <?php if ( 'post' === get_post_type() ) : ?>
+            <?php if ('post' === get_post_type()) : ?>
 
                 <div class="entry-meta">
                     <?php bensemangat_posted_on(); ?>
@@ -31,19 +32,21 @@ $container = get_theme_mod( 'bensemangat_container_type' );
 
             <?php endif; ?>
         </div>
-	</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
+    <div class="wrap-featured-image">
+        <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+    </div>
 
-	<div class="entry-content">
-        <div class="<?php echo esc_attr( $container ); ?>">
+    <div class="entry-content">
+        <div class="<?php echo esc_attr($container); ?>">
 
             <?php the_excerpt(); ?>
 
             <?php
             wp_link_pages(
                 array(
-                    'before' => '<div class="page-links">' . __( 'Pages:', 'bensemangat' ),
+                    'before' => '<div class="page-links">' . __('Pages:', 'bensemangat'),
                     'after'  => '</div>',
                 )
             );
@@ -51,12 +54,12 @@ $container = get_theme_mod( 'bensemangat_container_type' );
 
         </div>
 
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <div class="<?php echo esc_attr( $container ); ?>">
+        <div class="<?php echo esc_attr($container); ?>">
             <?php bensemangat_entry_footer(); ?>
         </div>
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

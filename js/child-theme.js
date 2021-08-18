@@ -7149,6 +7149,23 @@ var teamCareer = new Swiper('.team-career', {
   },
 });
 
+var swiper = new Swiper(".what-we-do", {
+  observer: true,
+  observeParents: true,
+  watchOverflow:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
 
 jQuery("[data-trigger]").on("click", function(){
   var trigger_id =  jQuery(this).attr('data-trigger');
@@ -7173,6 +7190,7 @@ jQuery(function ($) {
   if($('.section-element').length > 0) {
     $.scrollify({
       section : ".section-element",
+      sectionName : "section-name",
       scrollSpeed:1100,
       offset : 0,
       scrollbars:true,
@@ -7181,10 +7199,15 @@ jQuery(function ($) {
       overflowScroll: true,
       updateHash: true,
       touchScroll:false,
-      interstitialSection:"#wrapper-navbar,#content,footer"
+      interstitialSection:"#wrapper-navbar,#content,footer",
+      afterRender:function() {
+        $(".item-team").on("click",function() {
+          console.log($(this).data("href"));
+          $.scrollify.move($(this).data("href"));
+        });
+      }
     });
   }
-
   if($('.content-recruitment-tab').length > 0 && window.innerWidth < 992) {
     $('.tab-content-content-recruitment').hide();
 

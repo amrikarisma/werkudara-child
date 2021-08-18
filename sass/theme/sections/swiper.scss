@@ -3,9 +3,15 @@
     color: var(--white);
     border-radius: 50%;
     padding: 25px;
+    @media (min-width: 992px) {
+        padding: vw(28px);
+    }
     &::after {
         font-size: 16px;
         font-weight: bold;
+        @media (min-width: 992px) {
+            font-size: vw(18px);
+        }
     }
     
 }

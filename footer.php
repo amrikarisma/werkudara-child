@@ -25,9 +25,6 @@ $container = get_theme_mod('bensemangat_container_type');
                 <div class="menu-footer-wrapper">
                     <ul class="navbar-nav">
                         <li class="menu-item"><a class="nav-link" href="#">Download Company Profile</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Request for Proposal</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Become our Partner</a></li>
-                        <li class="menu-item"><a class="nav-link" href="#">Apply for a Job/ Internship</a></li>
                     </ul>
                     <ul class="navbar-nav right">
                         <li class="menu-item"><a class="nav-link" href="#">Terms of Use</a></li>

@@ -295,13 +295,17 @@ hr {
                 cursor: pointer;
                 height: 540px;
                 border-bottom: 10px solid #50BF9B;
-                transition: all 1s ease;
+                transition: all 1s ease-in-out;
                 @media(min-width: 992px) {
                     height: vw(640px);
                 }   
+                .overlay {
+                    transition: all 1s ease-in-out;
+                    background-image: unset;
+                }
                 .box-content-slider {
                     .caption {
-                        transition: all 1s ease;
+                        transition: all 1s ease-in-out;
                         display: block;
                     }
                 }
@@ -313,9 +317,13 @@ hr {
             @media(min-width: 992px) {
                 height: vw(640px);
             }
+            .overlay {
+                transition: all 1s ease-in-out;
+                background-image: unset;
+            }
             .box-content-slider {
                 .caption {
-                    transition: all 1s ease;
+                    transition: all 1s ease-in-out;
                     display: block;
                 }
             }
@@ -353,6 +361,15 @@ hr {
         .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
             left: -30px;
         }
+        .overlay {
+            transition: all 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient(1deg,#003db1c2,#003db14d);
+        }
         .box-content-slider {
             position: absolute;
             bottom: 0;
@@ -374,6 +391,7 @@ hr {
             }
             .caption {
                 display: none;
+                transition: all 1s ease-in-out;
                 padding-top: 30px;
                 font-size: 14px;
                 @media(min-width: 992px) {

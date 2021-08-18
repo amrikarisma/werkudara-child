@@ -26,15 +26,17 @@
                                         <?php $image = get_sub_field('image'); ?>
 
                                         <!-- Slides -->
-                                        <div class="swiper-slide" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image ? esc_url($image['url']) : ''; ?>');
+                                        <div class="swiper-slide" style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo $image ? esc_url($image['url']) : ''; ?>');
                                         ">
+                                            <div class="overlay">
+
+                                            </div>
                                             <div class="box-content-slider">
                                                 <div class="name"><?php echo get_sub_field('title'); ?></div>
                                                 <div class="position"><?php echo get_sub_field('subtitle'); ?></div>
                                                 <div class="caption"><?php echo get_sub_field('caption'); ?></div>
                                             </div>
                                         </div>
-
                                         <!-- End Slides -->
                                     <?php endwhile; ?>
                                     <div class="swiper-slide d-flex">

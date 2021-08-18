@@ -6,6 +6,7 @@
 @import "sections/single-product";
 @import "sections/featured-header";
 @import "sections/our-company";
+@import "sections/team-detail";
 @import "sections/page";
 @import "sections/career";
 @import "sections/single";
@@ -103,8 +104,11 @@ a:focus {
     text-decoration: none;
 }
 .container {
-    @media (min-width: 1200px) and (max-width: 1500px) {
+    @media (min-width: 1200px) and (max-width: 1439px) {
         max-width: 1140px;
+    }
+    @media (min-width: 1440px) and (max-width: 1600px) {
+        max-width: 1300px;
     }
 }
 label {
