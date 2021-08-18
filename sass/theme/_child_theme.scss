@@ -429,3 +429,14 @@ input[type="button"],
   .animate.animate__animated {
       opacity: 1;
   }
+
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
+    &:hover {
+        cursor: pointer;
+        color: var(--secondary);
+    }
+}

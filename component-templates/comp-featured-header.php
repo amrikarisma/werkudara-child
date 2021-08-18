@@ -15,7 +15,7 @@
     url('<?php echo $url[1] ?? ''; ?>'), 
     url('<?php echo $url[2] ?? ''; ?>')
     ">
-    <div class="section-element section-home-1" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+    <div class="section-home-1" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
         <div class="text-featured-header-float">
             <h3 data-aos="fade-in" data-aos-delay="1200" data-aos-duration="3000"><?php echo get_sub_field('title'); ?></h3>
             <div class="line"></div>

@@ -7,6 +7,7 @@
                 <a class="nav-link" id="v-pills-what-we-do-tab" data-toggle="pill" href="#v-pills-what-we-do" role="tab" aria-controls="v-pills-what-we-do" aria-selected="false">What <span>We Do</span></a>
                 <a class="nav-link" id="v-pills-core-value-tab" data-toggle="pill" href="#v-pills-core-value" role="tab" aria-controls="v-pills-core-value" aria-selected="false">Core <span>Values</span></a>
                 <a class="nav-link" id="v-pills-lega-entities-tab" data-toggle="pill" href="#v-pills-lega-entities" role="tab" aria-controls="v-pills-lega-entities" aria-selected="false"><span>Legal</span> Entities</a>
+                <a class="nav-link" href="#list-team" role="tab" aria-controls="list-team" aria-selected="false">Our <span>Team</span></a>
             </div>
             <div class="tab-content company-content-tab" id="v-pills-tabContent" data-aos="fade-in" data-aos-delay="1000">
                 <div class="tab-pane fade show active" id="v-pills-company" role="tabpanel" aria-labelledby="v-pills-company-tab">

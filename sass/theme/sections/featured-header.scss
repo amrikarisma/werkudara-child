@@ -282,23 +282,64 @@ hr {
             @media(min-width: 992px) {
                 padding-bottom: 0;
             }
-        }
-        .swiper-slide {
-            background-repeat:no-repeat;
-            background-size:cover;
-            height: 500px;
-            transition: all 1s ease;
-            @media(min-width: 992px) {
-                height: vw(550px);
+            &:not(.wrap-button-prev-next):hover {
+                .swiper-slide-active {
+                    height: 500px;
+                    border-bottom:none;
+                    @media(min-width: 992px) {
+                        height: vw(550px);
+                    }
+                    .overlay {
+                        transition: all 1s ease-in-out !important;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-image: linear-gradient(1deg,#003db1c2,#003db14d);
+                    }
+                    .box-content-slider {
+                        .caption {
+                            transition: all 1s ease-in-out;
+                            display: none;
+                        }
+                    }
+                }
             }
-            &:not(.d-flex):hover {
-                cursor: pointer;
+            .swiper-slide {
+                background-repeat:no-repeat;
+                background-size:cover;
+                height: 500px;
+                transition: all 1s ease;
+                @media(min-width: 992px) {
+                    height: vw(550px);
+                }
+                &:not(.d-flex):hover {
+                    cursor: pointer;
+                    height: 540px;
+                    border-bottom: 10px solid #50BF9B;
+                    transition: all 1s ease-in-out;
+                    @media(min-width: 992px) {
+                        height: vw(640px);
+                    }   
+                    .overlay {
+                        transition: all 1s ease-in-out;
+                        background-image: unset;
+                    }
+                    .box-content-slider {
+                        .caption {
+                            transition: all 1s ease-in-out;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .swiper-slide-active {
                 height: 540px;
                 border-bottom: 10px solid #50BF9B;
-                transition: all 1s ease-in-out;
                 @media(min-width: 992px) {
                     height: vw(640px);
-                }   
+                }
                 .overlay {
                     transition: all 1s ease-in-out;
                     background-image: unset;
@@ -308,23 +349,6 @@ hr {
                         transition: all 1s ease-in-out;
                         display: block;
                     }
-                }
-            }
-        }
-        .swiper-slide-active {
-            height: 540px;
-            border-bottom: 10px solid #50BF9B;
-            @media(min-width: 992px) {
-                height: vw(640px);
-            }
-            .overlay {
-                transition: all 1s ease-in-out;
-                background-image: unset;
-            }
-            .box-content-slider {
-                .caption {
-                    transition: all 1s ease-in-out;
-                    display: block;
                 }
             }
         }

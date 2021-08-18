@@ -225,6 +225,9 @@ section {
 }
 .section-maps {
     overflow: hidden;
+    .wrapper-iframe-maps {
+        height: 30vh;
+    }
 }
 .contact {
     .form-wrapper {

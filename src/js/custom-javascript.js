@@ -128,16 +128,35 @@ jQuery(function ($) {
       scrollSpeed:1100,
       offset : 0,
       scrollbars:true,
-      sectionName:false,
       setHeights: false,
       overflowScroll: true,
       updateHash: true,
-      touchScroll:false,
+      touchScroll:true,
       interstitialSection:"#wrapper-navbar,#content,footer",
       afterRender:function() {
         $(".item-team").on("click",function() {
-          console.log($(this).data("href"));
-          $.scrollify.move($(this).data("href"));
+          if (!$(this).hasClass("active") && !$( $(this).data("href")).hasClass("active")) {
+            $('#list-team').find('.item-team').removeClass('active');
+            $('.section-element').removeAttr('style');
+            $(this).addClass('active');
+            $($(this).data("href")).css({"position" : "static"});
+            $($(this).data("href")).addClass("active");
+            $($(this).data("href")+' .staff-detail').find('.item-team').addClass("active");
+            $.scrollify.move( $(this).data("href") );
+          } else {
+            $.scrollify.move('#list-team' );
+            $('#list-team').find('.item-team').removeClass('active');
+            $('.section-element').removeAttr('style');
+            $($(this).data("href")).removeClass("active");
+            $(this).removeClass('active');
+
+          }
+        });
+        $(".close-btn").on("click",function() {
+          $.scrollify.move('#list-team' );
+          $('.item-team').removeClass('active');
+          $('.section-element').removeAttr('style');
+
         });
       }
     });
@@ -162,7 +181,7 @@ jQuery(function ($) {
   }
 
   $('#home_featured_section').mousemove(function(e){
-    var movementStrength = 25;
+    var movementStrength = 130;
     var height = movementStrength / $(window).height();
     var width = movementStrength / $(window).width();
     var pageX = e.pageX - ($(window).width() / 2);
@@ -190,7 +209,15 @@ jQuery(function ($) {
   });
 });
 
-
+function getScrollifySectionIndex(anchor){
+  var idpanel = false;
+  jQuery('.section-element').each(function(i){
+      if( jQuery(this).data('section-name') == anchor.toString().replace(/#/g,"") ){
+        idpanel = i;
+      };
+  });
+  return idpanel;
+};
 
 const scrollElements = document.querySelectorAll(".counter");
 

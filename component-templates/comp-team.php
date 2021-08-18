@@ -40,7 +40,7 @@
                                         <!-- End Slides -->
                                     <?php endwhile; ?>
                                     <div class="swiper-slide d-flex">
-                                        <button class="btn btn-primary align-self-center">MEET MORE</button>
+                                        <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-primary align-self-center" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
                                     </div>
                                 </div>
 

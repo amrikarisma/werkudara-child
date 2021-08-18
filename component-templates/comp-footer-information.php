@@ -22,7 +22,7 @@
                             </h3>
 
                         </div>
-                        <div class="col-md">
+                        <div class="col-md-3">
                             <h3><strong>FOLLOW</strong> US</h3>
                             <ul class="link-social-media">
                                 <li class="d-inline">

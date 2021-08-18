@@ -194,6 +194,9 @@
 .wrapper-section-detail-item-team {
     background-color: #ffffff4d;
     padding: 20px;
+    position: absolute;
+    left: -60000px;
+    transition: all 2s ease-out;
     @media(min-width: 992px) {
         padding: vw(50px);
     }
