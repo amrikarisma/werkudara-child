@@ -53,35 +53,59 @@ var team = new Swiper('.team', {
     },
   },
 });
-var swiper = new Swiper(".swiper-client-logo", {
-  observer: true,
-  observeParents: true,
-  watchOverflow:true,
-  slidesPerView: 5,
-  slidesPerColumn: 4,
-  slidesPerColumnFill: 'row',
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+var x = document.getElementsByClassName("list-client-logo");
 
-var teamCareer = new Swiper('.team-career', {
-  watchOverflow:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  slidesPerView: 1,
-  spaceBetween: 30,
-  breakpoints: {
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 30,
+for(var i = 0; i < x.length; i++) {
+
+	var el = x[i];
+  
+  var swiper = el.getElementsByClassName("swiper-container")[0];
+  var nx = el.getElementsByClassName("swiper-button-next")[0];
+  var pr = el.getElementsByClassName("swiper-button-prev")[0];
+
+  new Swiper(swiper, {
+    observer: true,
+    observeParents: true,
+    watchOverflow:true,
+    slidesPerView: 5,
+    slidesPerColumn: 4,
+    slidesPerColumnFill: 'row',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: nx,
+      prevEl: pr,
     },
-  },
-});
+  });
+}
+
+var x = document.getElementsByClassName("team-career-wrapper");
+
+for(var i = 0; i < x.length; i++) {
+
+	var el = x[i];
+  
+  var swiper = el.getElementsByClassName("swiper-container")[0];
+  var nx = el.getElementsByClassName("swiper-button-next")[0];
+  var pr = el.getElementsByClassName("swiper-button-prev")[0];
+
+  new Swiper(swiper, {
+
+    watchOverflow:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+    navigation: {
+      nextEl: nx,
+      prevEl: pr,
+    },
+  });
+}
+
 
 var swiper = new Swiper(".what-we-do", {
   observer: true,
@@ -117,48 +141,58 @@ jQuery(".btn-close").on('click', function(e){
 // init Masonry
 
 jQuery(function ($) {
+  $('.wrapper-plus').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('.card').toggleClass('active');
+  });
   $('.readmore').on('click', function (e) {
     e.preventDefault();
     $(this).closest('.text-expandable').removeClass('wrap-content');
+    $(this).hide();
   });
   if($('.section-element').length > 0) {
-    $.scrollify({
-      section : ".section-element",
-      sectionName : "section-name",
-      scrollSpeed:1100,
-      offset : 0,
-      scrollbars:true,
-      setHeights: false,
-      overflowScroll: true,
-      updateHash: true,
-      touchScroll:true,
-      interstitialSection:"#wrapper-navbar,#content,footer",
-      afterRender:function() {
-        $(".item-team").on("click",function() {
-          if (!$(this).hasClass("active") && !$( $(this).data("href")).hasClass("active")) {
-            $('#list-team').find('.item-team').removeClass('active');
-            $('.section-element').removeAttr('style');
-            $(this).addClass('active');
-            $($(this).data("href")).css({"position" : "static"});
-            $($(this).data("href")).addClass("active");
-            $($(this).data("href")+' .staff-detail').find('.item-team').addClass("active");
-            $.scrollify.move( $(this).data("href") );
-          } else {
-            $.scrollify.move('#list-team' );
-            $('#list-team').find('.item-team').removeClass('active');
-            $('.section-element').removeAttr('style');
-            $($(this).data("href")).removeClass("active");
-            $(this).removeClass('active');
+    // $.scrollify({
+    //   section : ".section-element",
+    //   sectionName : "section-name",
+    //   scrollSpeed:1100,
+    //   offset : 0,
+    //   scrollbars:true,
+    //   setHeights: false,
+    //   overflowScroll: true,
+    //   updateHash: true,
+    //   touchScroll:true,
+    //   interstitialSection:"#wrapper-navbar,#content,footer",
+    //   afterRender:function() {
+ 
+    //   }
+    // });
+    $(".item-team").on("click",function() {
+      if (!$(this).hasClass("active") && !$( $(this).data("href")).hasClass("active")) {
+        $('#list-team').find('.item-team').removeClass('active');
+        $('.section-element').removeAttr('style');
+        $(this).addClass('active');
+        $($(this).data("href")).css({"position" : "static"});
+        $($(this).data("href")).addClass("active");
+        if ($($(this).data("href")).hasClass('staff-detail') ) {
+          $($(this).data("href")).find('.item-team').addClass("active");
+        }
+        window.location.hash = $(this).data("href");
 
-          }
-        });
-        $(".close-btn").on("click",function() {
-          $.scrollify.move('#list-team' );
-          $('.item-team').removeClass('active');
-          $('.section-element').removeAttr('style');
+      } else {
+        window.location.hash = "list-team";
+        $('#list-team').find('.item-team').removeClass('active');
+        $('.section-element').removeAttr('style');
+        $($(this).data("href")).removeClass("active");
+        $(this).removeClass('active');
 
-        });
       }
+    });
+    $(".close-btn").on("click",function() {
+      window.location.hash = "list-team";
+
+      $('.item-team').removeClass('active');
+      $('.section-element').removeAttr('style');
+
     });
   }
   if($('.content-recruitment-tab').length > 0 && window.innerWidth < 992) {

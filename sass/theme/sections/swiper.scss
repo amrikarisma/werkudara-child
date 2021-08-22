@@ -3,9 +3,6 @@
     color: var(--white);
     border-radius: 50%;
     padding: 25px;
-    @media (min-width: 992px) {
-        padding: vw(28px);
-    }
     &::after {
         font-size: 16px;
         font-weight: bold;
@@ -15,13 +12,6 @@
     }
     
 }
-
-// .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-//     right: -30px;
-// }
-// .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-//     left: -30px;
-// }
 
 .swiper-wrapper.disabled {
     transform: translate3d(0px, 0, 0) !important;

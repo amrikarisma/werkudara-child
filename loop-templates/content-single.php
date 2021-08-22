@@ -13,7 +13,7 @@ $container = get_theme_mod('bensemangat_container_type');
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-    <header class="entry-header">
+    <header class="entry-header" data-aos="fade-in" data-aos-delay="500">
         <div class="<?php echo esc_attr($container); ?>">
             <div class="wrapper-title d-flex">
                 <?php
@@ -51,17 +51,18 @@ $container = get_theme_mod('bensemangat_container_type');
             </div>
             <div class="entry-meta">
 
-                <?php bensemangat_posted_on(); ?>
+                <?php //bensemangat_posted_on(); 
+                ?>
 
             </div><!-- .entry-meta -->
         </div>
 
     </header><!-- .entry-header -->
-    <div class="wrap-featured-image">
+    <div class="wrap-featured-image" data-aos="fade-in" data-aos-delay="800">
         <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
     </div>
 
-    <div class="entry-content">
+    <div class="entry-content" data-aos="fade-in" data-aos-delay="800">
         <div class="<?php echo esc_attr($container); ?>">
 
             <?php the_content(); ?>
@@ -70,7 +71,7 @@ $container = get_theme_mod('bensemangat_container_type');
         </div>
     </div><!-- .entry-content -->
 
-    <footer class="entry-footer">
+    <footer class="entry-footer" data-aos="fade-in" data-aos-delay="1200">
         <div class="<?php echo esc_attr($container); ?>">
 
             <?php bensemangat_entry_footer(); ?>

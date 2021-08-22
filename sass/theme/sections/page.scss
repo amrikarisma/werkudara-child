@@ -487,6 +487,12 @@ section {
         height: vw(450px);
         margin-bottom: vw(100px);
     }
+    &.thumbnail {
+        margin-bottom: 5px;
+        @media (min-width: 992px) {
+            margin-bottom: vw(15px);
+        }
+    }
     img {
         width: 100%;
         height: fit-content;

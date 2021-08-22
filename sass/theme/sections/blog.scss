@@ -1,0 +1,115 @@
+
+.blog,
+.archive {
+    .entry-header {
+        text-align: left;
+        padding: 0;
+        .entry-meta {
+            font-size: 20px;
+            margin-bottom: 5px;
+            @media (min-width: 992px) {
+                font-size: vw(26px);
+                margin-bottom: vw(5px);
+            }
+        }
+        .entry-title {
+            padding: 0;
+            margin: 0 0 20px 0;
+            line-height: normal;
+            @media (min-width: 992px) {
+                font-size: vw(20px);
+                margin: 0 0 vw(20px) 0;
+            }
+            a {
+                color: var(--dark);
+                font-size: 40px;
+                @media (min-width: 992px) {
+                    font-size: vw(46px);
+                }
+            }
+        }
+        .entry-excerpt {
+            font-size: 20px;
+            @media (min-width: 992px) {
+                font-size: vw(26px);
+            }
+        }
+    }
+    .wrap-category {
+        @media (min-width: 992px) {
+            padding-left: vw(50px);
+        }
+        h4 {
+            margin-top: 0;
+        }
+    }
+    .all-category-list {
+        padding-left: 0;
+        list-style: none;
+        border-left: 3px solid #b5b5b5;
+         > li {
+            padding-left: 20px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            &:hover {
+                border-left: 3px solid var(--primary);
+                margin-left: -3px;
+                a {
+                    color: var(--primary);
+                }
+            }
+        }
+        a {
+            color: var(--secondary);
+            font-size: 20px;
+
+            @media (min-width: 992px) {
+                font-size: vw(26px);
+            }
+
+        }
+
+    }
+}
+
+.pagination {
+    justify-content: center;
+    margin: 30px auto;
+    @media (min-width: 992px) {
+        margin: vw(30px) auto;
+    }
+    a {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #b5b5b5;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: 992px) {
+            width: vw(56px);
+            height: vw(56px);
+            border: 2px solid #b5b5b5;
+            border-radius: vw(31px);
+        }
+        &:first-child {
+            margin-right: 20px;
+            @media (min-width: 992px) {
+                margin-right: vw(20px);
+            }
+        }
+        &:last-child {
+            margin-left: 20px;
+            @media (min-width: 992px) {
+                margin-left: vw(20px);
+            }
+        }
+        svg {
+            width: 42px;
+            height: auto;
+            @media (min-width: 992px) {
+                width: vw(48px);
+            }
+        }
+    }
+}

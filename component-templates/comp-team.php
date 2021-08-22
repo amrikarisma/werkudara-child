@@ -1,4 +1,4 @@
-<div class="section-element section-home-4" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-4" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-4">
             <h3 class="" data-aos="fade-up" data-aos-delay="400"><?php echo get_sub_field('title'); ?></h3>
@@ -6,10 +6,6 @@
                 <div class="col-md-4">
                     <div class="text-content-section-4" data-aos="fade-left" data-aos-delay="700">
                         <?php echo get_sub_field('content'); ?>
-                        <?php $button = get_sub_field('button'); ?>
-                        <?php if ($button) : ?>
-                            <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
-                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -40,6 +36,7 @@
                                         <!-- End Slides -->
                                     <?php endwhile; ?>
                                     <div class="swiper-slide d-flex">
+                                        <?php $button = get_sub_field('button'); ?>
                                         <a href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>" class="btn btn-primary align-self-center" data-aos="fade-up" data-aos-delay="2000"><?php echo esc_html($button['title']); ?></a>
                                     </div>
                                 </div>

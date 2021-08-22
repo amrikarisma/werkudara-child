@@ -201,7 +201,10 @@
         padding: vw(50px);
     }
     .card-body {
-        padding: 50px;
+        padding: 15px 10px;
+        @media(min-width: 992px) {
+            padding: vw(50px);
+        }
     }
     .item-team {
         .box-content-item-team {
@@ -249,8 +252,10 @@
     }
     .content-detail-item-team {
         color: var(--secondary);
+        margin-top: 15px;
         font-size: 16px;
         @media(min-width: 992px) {
+            margin-top: 0;
             font-size: vw(28px);
         }
         .tag {

@@ -1,4 +1,4 @@
-<div class="section-element recruitment-process">
+<div class="section-element recruitment-process" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <h3 data-aos="fade-up" data-aos-delay="200"><?php echo get_sub_field('title'); ?></h3>
     <div class="container">
         <div class="wrapper-content-recruitment">

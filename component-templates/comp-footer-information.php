@@ -1,4 +1,4 @@
-<div class="section-element section-home-11" id="footer_information">
+<div class="section-element section-home-11" id="footer_information" data-section-name="footer_information">
     <div class="container">
         <div class="text-section-11">
             <div class="wrapper-footer-information">
@@ -15,7 +15,7 @@
 
                         <div class="col-md">
                             <h3><strong>COME AND VISIT</strong> US</h3>
-                            <p>Jl. Pandean Sari Blok IV No. 10A Condongcatur, Depok, Sleman, Yogyakarta 55283, Indonesia</p>
+                            <p><?php echo get_theme_mod('bensemangat_site_info_address'); ?></p>
 
                             <h3 class="find-us-footer">
                                 <strong>FIND</strong> US <a href="https://maps.google.com"><img src="/wp-content/uploads/2021/08/maps.png" alt="maps"></a>

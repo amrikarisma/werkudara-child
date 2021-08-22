@@ -1,4 +1,4 @@
-<div class="section-element section-home-5" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-5" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-5">
             <h3 data-aos="fade-left" data-aos-delay="300"><?php echo get_sub_field('title'); ?></h3>
@@ -48,9 +48,9 @@
                                                                 <?php endforeach; ?>
                                                             <?php endif; ?>
                                                         </div>
-                                                        <div class="swiper-button-next"></div>
-                                                        <div class="swiper-button-prev"></div>
                                                     </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
                                                 </div>
                                             </div>
                                         </div>

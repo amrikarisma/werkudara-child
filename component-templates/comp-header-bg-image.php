@@ -1,4 +1,4 @@
-<div class="section-element section-header-career" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-header-career" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="header-featured-image" style="background-image: url('<?php echo get_sub_field('background')['url']; ?>');">
             <div class="wrapper-text-header-featured">

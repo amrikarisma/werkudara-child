@@ -1,4 +1,4 @@
-<div class="section-element section-home-3" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-3" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-3">
             <h3 class="" data-aos="fade-left" data-aos-delay="600"><?php echo get_sub_field('title'); ?></h3>

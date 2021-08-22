@@ -1,4 +1,4 @@
-<div class="section-element list-content text-expandable wrap-content">
+<div class="section-element list-content text-expandable wrap-content" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="category" data-aos="fade-left" data-aos-delay="700">
             <span><?php echo get_sub_field('subtitle'); ?></span>

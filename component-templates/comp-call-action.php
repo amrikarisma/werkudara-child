@@ -1,4 +1,4 @@
-<div class="section-element section-home-10" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-10" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-10">
             <h3 data-aos="slide-up" data-aos-delay="500"><?php echo get_sub_field('title'); ?></h3>

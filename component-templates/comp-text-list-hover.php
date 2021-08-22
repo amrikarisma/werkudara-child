@@ -1,4 +1,4 @@
-<div class="section-element list-content text-list-hover">
+<div class="section-element list-content text-list-hover" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="category" data-aos="fade-up" data-aos-delay="200">
             <span><?php echo get_sub_field('subtitle'); ?></span>

@@ -50,6 +50,9 @@ while (have_posts()) :
                 case 'maps':
                     get_template_part('loop-templates/content', 'maps', $section);
                     break;
+                case 'maps_embed':
+                    get_template_part('loop-templates/content', 'maps', $section);
+                    break;
                 case 'products':
                     get_template_part('loop-templates/content', 'products', $section);
                     break;

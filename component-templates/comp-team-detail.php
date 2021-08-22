@@ -74,7 +74,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <div class="item-team active" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                 <div class="overlay">
                                 </div>
@@ -131,7 +131,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <?php $image = get_sub_field('image'); ?>
                                         <div class="item-team active" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                             <div class="overlay">
@@ -265,7 +265,7 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-4">
+                                                <div class="col-md-4">
                                                     <?php $image = get_sub_field('image'); ?>
                                                     <div class="item-team active" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                                         <div class="overlay">
@@ -328,7 +328,7 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="item-team active" style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/wp-content/uploads/2021/08/Bagus.jpg');
                                                 ">
                         <div class="overlay">

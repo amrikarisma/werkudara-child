@@ -13,6 +13,7 @@
 @import "sections/footer";
 @import "sections/contact-form7";
 @import "sections/swiper";
+@import "sections/blog";
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -35,8 +36,12 @@ html, body {
     }
 }
 body {
-    background-image: linear-gradient(to right, #F5F5F5 , #D7D7D7);
     overflow-x: hidden;
+    background-color: #fcfbf7;
+    &.home {
+        background-color: transparent;
+        background-image: linear-gradient(to right, #F5F5F5 , #D7D7D7);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,11 +109,8 @@ a:focus {
     text-decoration: none;
 }
 .container {
-    @media (min-width: 1200px) and (max-width: 1439px) {
+    @media (min-width: 1200px) and (max-width: 1600px) {
         max-width: 1140px;
-    }
-    @media (min-width: 1440px) and (max-width: 1600px) {
-        max-width: 1300px;
     }
 }
 label {
@@ -435,8 +437,20 @@ input[type="button"],
     right: 0;
     top: 20px;
     right: 20px;
+    z-index: 2;
     &:hover {
         cursor: pointer;
         color: var(--secondary);
+    }
+}
+
+
+.entry-blog-header {
+    text-align: left;
+    .entry-blog-title {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 60px;
+        font-family: var(--font-headers);
     }
 }

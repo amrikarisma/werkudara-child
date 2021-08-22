@@ -1,4 +1,4 @@
-<div class="section-element section-home-8" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
+<div class="section-element section-home-8" id="<?php echo getIdFromTitle(get_sub_field('title')); ?>" data-section-name="<?php echo getIdFromTitle(get_sub_field('title')); ?>">
     <div class="container">
         <div class="text-section-8">
             <h3 data-aos="fade-left" data-aos-delay="300"><?php echo get_sub_field('title'); ?></h3>
@@ -10,6 +10,9 @@
                 <?php
                 $args = array(
                     'numberposts' => 10,
+                    'category'         => get_sub_field('category'),
+                    'orderby'          => 'date',
+                    'order'            => 'DESC',
                     'meta_key' => '_thumbnail_id'
                 );
 
