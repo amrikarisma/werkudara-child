@@ -95,4 +95,6 @@ get_header();
 </div><!-- #index-wrapper -->
 
 <?php
+get_template_part('component-templates/comp', 'footer-information');
+
 get_footer();

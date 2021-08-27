@@ -48,6 +48,6 @@ if (have_rows('section')) : ?>
     <?php endwhile; ?>
 <?php else : ?>
     <?php // no layouts found 
-    ?>
+      ?>
 <?php endif;
 get_footer();

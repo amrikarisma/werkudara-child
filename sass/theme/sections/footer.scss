@@ -7,7 +7,7 @@ footer {
         li.menu-item {
             
             @media (max-width: 767px) {
-                padding: 10px 5px;
+                padding: 5px ;
             }
             @media (min-width: 992px) {
                 margin-right: vw(30px);
@@ -18,8 +18,12 @@ footer {
             margin-left: 0;
             .navbar-nav {
                 flex-direction: row ;
+                flex-wrap: wrap;
+                justify-content: center;
                 @media (min-width: 992px) {
                     flex-direction: row ;
+                    justify-content: start;
+
                 }
             }
     }

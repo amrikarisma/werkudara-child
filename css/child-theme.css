@@ -18474,7 +18474,7 @@ nav.navbar.affix {
   to {
     opacity: 1;
     background-size: 500px, 300px, 300px;
-    background-position: left 100px top 400px, 70px 350px, left -50px top 400px;
+    background-position: left 100px top 400px, 70px 300px, left -50px top 400px;
   }
 }
 @keyframes jaranMobile {
@@ -18486,12 +18486,12 @@ nav.navbar.affix {
   to {
     opacity: 1;
     background-size: 500px, 300px, 300px;
-    background-position: left 100px top 400px, 70px 350px, left -50px top 400px;
+    background-position: left 100px top 400px, 70px 300px, left -50px top 400px;
   }
 }
 .section-featured-home {
   background-size: 500px, 300px, 300px;
-  background-position: left 100px top 400px, 70px 350px, left -50px top 400px;
+  background-position: left 100px top 400px, 70px 300px, left -50px top 400px;
   background-repeat: repeat-x, no-repeat, no-repeat;
   background-blend-mode: hard-light, normal, normal;
   -webkit-transition: all 0.3s ease;
@@ -19918,7 +19918,7 @@ hr {
 }
 .section-home-11 .footer-information {
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
 }
 @media (min-width: 992px) {
   .section-home-11 .footer-information {
@@ -19928,7 +19928,7 @@ hr {
   }
 }
 .section-home-11 .footer-information h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 2;
 }
@@ -19950,7 +19950,7 @@ hr {
   }
 }
 .section-home-11 .footer-information p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 28px;
 }
@@ -21985,7 +21985,7 @@ footer .navbar-nav {
 }
 @media (max-width: 767px) {
   footer .navbar-nav li.menu-item {
-    padding: 10px 5px;
+    padding: 5px;
   }
 }
 @media (min-width: 992px) {
@@ -22001,6 +22001,11 @@ footer .menu-primary-container .navbar-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 992px) {
   footer .menu-primary-container .navbar-nav {
@@ -22008,6 +22013,9 @@ footer .menu-primary-container .navbar-nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 footer .all-footer-menu-wrapper {

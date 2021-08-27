@@ -246,7 +246,7 @@ jQuery(function ($) {
       var pageX = e.pageX - ($(window).width() / 2);
       var pageY = e.pageY - ($(window).height() / 2);
       var newvalueX = width * pageX * -1 - (-70);
-      var newvalueY = height * pageY * -1 - (-350);
+      var newvalueY = height * pageY * -1 - (-300);
     } else {
       var movementStrength = 130;
       var height = movementStrength / $(window).height();
