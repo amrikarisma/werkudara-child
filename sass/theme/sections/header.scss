@@ -21,20 +21,21 @@
                 text-align: center;
             }
             &::after {
-                @media (max-width: 991px) {
-                    display: inline-block;
-                    font: normal normal normal 14px/1 FontAwesome;
-                    font-size: inherit;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    vertical-align: middle;
-                    content: "\f105";
-                    font-weight: 400;
-                    margin: 4px 0 0 6px;
-                    position: absolute;
-                    transition: color 0.5s ease;
-                }
+                // @media (max-width: 991px) {
+                //     display: inline-block;
+                //     font: normal normal normal 14px/1 FontAwesome;
+                //     font-size: inherit;
+                //     text-rendering: auto;
+                //     -webkit-font-smoothing: antialiased;
+                //     -moz-osx-font-smoothing: grayscale;
+                //     vertical-align: middle;
+                //     content: "\f105";
+                //     font-weight: 400;
+                //     margin: 4px 0 0 6px;
+                //     border: none;
+                //     position: absolute;
+                //     transition: color 0.5s ease;
+                // }
             }
         }
     }
@@ -45,16 +46,30 @@
                     color: var(--main);
                 }
             }
-            .nav-link {
-                font-size: 20px;
+            .dropdown-item {
+                font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
                 color: var(--main);
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            .nav-link {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: var(--main);
+                display: flex;
+                justify-content: space-between;
+                white-space: pre-wrap;
                 @media(min-width: 992px) {
+                    display: block;
                     padding: vw(60px) vw(30px) vw(10px) vw(30px);
-                    font-size: vw(22px);
+                    font-size: vw(21px);
                 }
                 &::after {
+                    display: none;
                     @media (min-width:992px) {
                         opacity: 0;
                         display: block;
@@ -66,11 +81,13 @@
                         width: vw(80px);
                         height: vw(30px);
                         transition: all .3s ease-in-out;
+                        border: none;
                     }
                 }
                 &:hover {
                     &::after {
                         @media (min-width:992px) {
+                            border: none;
                             opacity: 1;
                             transition: all .3s ease-in-out;
                         }
@@ -80,8 +97,8 @@
         }
         a.navbar-brand.custom-logo-link {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 10px;
+            left: 20px;
             @media (min-width: 992px) {
                 top: vw(40px);
                 left: vw(50px);
@@ -90,7 +107,7 @@
         img {
             max-width: 50px;
             @media (min-width: 992px) {
-                max-width: vw(100px);
+                max-width: vw(90px);
             }
         }
     }
@@ -102,14 +119,26 @@
                     color: var(--main);
                 }
             }
+            .dropdown-item {
+                font-size: 16px;
+                color: var(--dark);
+                text-transform: uppercase;
+                font-weight: 600;
+                @media(min-width: 992px) {
+                    font-size: vw(21px);
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
             .nav-link {
-                font-size: 20px;
+                font-size: 16px;
                 color: var(--dark);
                 font-weight: 600;
                 text-transform: uppercase;
                 @media(min-width: 992px) {
                     padding: vw(50px) vw(30px) vw(40px) vw(30px);
-                    font-size: vw(22px);
+                    font-size: vw(21px);
                 }
             }
         }
@@ -165,7 +194,7 @@ header {
                 font-size: 14px;
               }
               a {
-                color: #88B44E;
+                color: var(--main);
                 font-style: normal;
                 &:hover {
                     color: #fff;
@@ -184,7 +213,7 @@ header {
                 -moz-osx-font-smoothing: grayscale;
                 font-size: 8px;
                 font-weight: 400;
-                color: #88B44E;
+                color: var(--main);
               }
           }
       }

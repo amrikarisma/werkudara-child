@@ -8,24 +8,28 @@
             <?php if (have_rows('list')) : ?>
                 <div class="list-feature-section-3">
                     <div class="row">
-                        <?php $bussinessCount = 325; ?>
+                        <?php $bussinessCount = 225; ?>
                         <?php while (have_rows('list')) : the_row(); ?>
-                            <div class="col-6 col-md align-self-end item-featured" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
+                            <div class="col-6 col-md align-self-end item-featured">
                                 <?php $link = get_sub_field('link'); ?>
                                 <?php if ($link) : ?>
-                                    <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>">
+                                    <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
                                         <?php $image = get_sub_field('image'); ?>
                                         <?php if ($image) : ?>
                                             <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                         <?php endif; ?>
-                                        <h4><?php the_sub_field('title'); ?></h4>
+                                        <div class="animation-title" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
+                                            <h4><?php the_sub_field('title'); ?></h4>
+                                        </div>
                                     </a>
                                 <?php else : ?>
                                     <?php $image = get_sub_field('image'); ?>
                                     <?php if ($image) : ?>
-                                        <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                        <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
                                     <?php endif; ?>
-                                    <h4><?php the_sub_field('title'); ?></h4>
+                                    <div class="animation-title" data-aos="fade-up" data-aos-delay="<?php echo $bussinessCount; ?>">
+                                        <h4><?php the_sub_field('title'); ?></h4>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                             <?php $bussinessCount = $bussinessCount * 2; ?>

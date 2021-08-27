@@ -15,8 +15,8 @@ h3.heading {
 }
 .our-company-1 {
     position: relative;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @media(min-width: 992px) {
         padding-top: vw(150px);
         padding-bottom: vw(300px);
@@ -57,6 +57,14 @@ h3.heading {
             @media(min-width: 992px) {
                 margin-top: vw(-150px);
             }
+            .what-we-do-tab-pane {
+                .content-tab-pane {
+                    padding: 0;
+                    @media(min-width: 992px) {
+                        padding: vw(50px);
+                    }
+                }
+            }
             .content-tab-pane {
                 padding: 20px;
                 border-left: 3px solid #3CA2FA;
@@ -68,6 +76,16 @@ h3.heading {
                     font-size: vw(28px);
                 }
                 .corporate-tab-slider {
+                    position: relative;
+                    .what-we-do {
+                        width: 90%;
+                    }
+                    .swiper-button-next {
+                        right: -15px;
+                    }
+                    .swiper-button-prev {
+                        left: -15px;
+                    }
                     .wrapper-plus {
                         position: absolute;
                         top: 10px;
@@ -103,7 +121,10 @@ h3.heading {
                     .card {
                         p {
                             display: none;
-                            font-size: vw(16px);
+                            font-size: 16px;
+                            @media(min-width: 992px) {
+                                font-size: vw(16px);
+                            }
                         }
                         &.active {
                             p {
@@ -239,8 +260,11 @@ h3.heading {
                         border-bottom-right-radius: vw(15px);
                     }
                     h3 {
-                        font-size: vw(20px);
+                        font-size:20px;
                         font-weight: normal;
+                        @media (min-width: 992px) {
+                            font-size: vw(20px);
+                        }
                     }
                 }
             }

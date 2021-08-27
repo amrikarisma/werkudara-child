@@ -5,7 +5,7 @@
         text-align: left;
         padding: 0;
         .entry-meta {
-            font-size: 20px;
+            font-size: 16px;
             margin-bottom: 5px;
             @media (min-width: 992px) {
                 font-size: vw(26px);
@@ -22,14 +22,14 @@
             }
             a {
                 color: var(--dark);
-                font-size: 40px;
+                font-size: 26px;
                 @media (min-width: 992px) {
                     font-size: vw(46px);
                 }
             }
         }
         .entry-excerpt {
-            font-size: 20px;
+            font-size: 16px;
             @media (min-width: 992px) {
                 font-size: vw(26px);
             }
@@ -41,6 +41,10 @@
         }
         h4 {
             margin-top: 0;
+            font-size: 15px;
+            @media (min-width: 992px) {
+                font-size: vw(30px);
+            }
         }
     }
     .all-category-list {
@@ -61,7 +65,7 @@
         }
         a {
             color: var(--secondary);
-            font-size: 20px;
+            font-size: 16px;
 
             @media (min-width: 992px) {
                 font-size: vw(26px);

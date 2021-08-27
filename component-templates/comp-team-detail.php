@@ -4,7 +4,7 @@
             <div class="row no-gutters">
                 <?php if (have_rows('team')) : ?>
                     <?php while (have_rows('team')) : the_row(); ?>
-                        <div class="col-md">
+                        <div class="col-6 col-lg">
                             <?php $image = get_sub_field('image'); ?>
                             <div class="item-team" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                 <div class="overlay">
@@ -38,7 +38,7 @@
                         <?php if (have_rows('list')) : ?>
                             <?php while (have_rows('list')) : the_row(); ?>
                                 <?php if (get_row_layout() == 'staff') : ?>
-                                    <div class="col-md-2">
+                                    <div class="col-6 col-md-2">
                                         <?php $image = get_sub_field('image'); ?>
                                         <div class="item-team" data-href='#<?php echo getIdFromTitle(get_sub_field('division')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                             <div class="overlay">
@@ -214,7 +214,7 @@
                                         </div>
                                         <div class="wrapper-content-item-team">
                                             <div class="row no-gutters">
-                                                <div class="col-md-3">
+                                                <div class="col-6 col-md-3">
                                                     <?php $image = get_sub_field('image'); ?>
                                                     <div class="item-team" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('<?php echo esc_url($image['url'] ?? ''); ?>');">
                                                         <div class="overlay">
@@ -229,7 +229,7 @@
                                                 <?php if (have_rows('list_staff')) : ?>
                                                     <?php while (have_rows('list_staff')) : the_row(); ?>
                                                         <?php if (get_row_layout() == 'staff') : ?>
-                                                            <div class="col-md-3">
+                                                            <div class="col-6 col-md-3">
                                                                 <?php $image = get_sub_field('image'); ?>
 
                                                                 <div class="item-team" data-href='#<?php echo getIdFromTitle(get_sub_field('title')); ?>' style="background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/wp-content/uploads/2021/08/Linda.jpg');">

@@ -341,6 +341,10 @@ input[type="button"],
 .line {
     border-bottom: 3px solid #bbbaba;
     width: 100px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+        margin: 0;
+    }
 }
 
 .link-social-media {
@@ -448,9 +452,14 @@ input[type="button"],
 .entry-blog-header {
     text-align: left;
     .entry-blog-title {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        font-size: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 38px;
         font-family: var(--font-headers);
+        @media(min-width: 992px) {
+            padding-top: vw(30px);
+            padding-bottom: vw(30px);
+            font-size: vw(60px);
+        }
     }
 }

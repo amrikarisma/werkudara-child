@@ -23,6 +23,7 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
+
 var homepage = new Swiper('.homepage', {
   watchOverflow:true,
   loop: true,
@@ -105,25 +106,42 @@ for(var i = 0; i < x.length; i++) {
     },
   });
 }
+var x = document.getElementsByClassName("corporate-tab-slider");
 
+for(var i = 0; i < x.length; i++) {
 
-var swiper = new Swiper(".what-we-do", {
-  observer: true,
-  observeParents: true,
-  watchOverflow:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  slidesPerView: 1,
-  spaceBetween: 30,
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+	var el = x[i];
+  
+  var swiper = el.getElementsByClassName("swiper-container")[0];
+  var nx = el.getElementsByClassName("swiper-button-next")[0];
+  var pr = el.getElementsByClassName("swiper-button-prev")[0];
+
+  new Swiper(swiper, {
+    observer: true,
+    observeParents: true,
+    watchOverflow:true,
+    navigation: {
+      nextEl: nx,
+      prevEl: pr,
     },
-  },
-});
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    },
+  });
+}
 
 jQuery("[data-trigger]").on("click", function(){
   var trigger_id =  jQuery(this).attr('data-trigger');
@@ -138,9 +156,15 @@ jQuery(".btn-close").on('click', function(e){
 });
 
 
-// init Masonry
-
 jQuery(function ($) {
+  $('li.dropdown',this).append('<i class="fa fa-angle-down"></i>');
+    //subnav toggle
+  $('li.dropdown i').on('click', function(e){
+    e.preventDefault();
+    $('li.dropdown li').not($(this).parents('li')).removeClass('show');
+    $(this).closest('li').find('.dropdown-menu').toggleClass('show');
+  });
+
   $('.wrapper-plus').on('click', function (e) {
     e.preventDefault();
     $(this).closest('.card').toggleClass('active');
@@ -195,7 +219,7 @@ jQuery(function ($) {
 
     });
   }
-  if($('.content-recruitment-tab').length > 0 && window.innerWidth < 992) {
+  if($('.content-recruitment-tab').length > 0 && window.innerWidth < 768) {
     $('.tab-content-content-recruitment').hide();
 
     $('.tab-box-recruitment').find('.nav-link').on('click', function () {
@@ -215,20 +239,30 @@ jQuery(function ($) {
   }
 
   $('#home_featured_section').mousemove(function(e){
-    var movementStrength = 130;
-    var height = movementStrength / $(window).height();
-    var width = movementStrength / $(window).width();
-    var pageX = e.pageX - ($(window).width() / 2);
-    var pageY = e.pageY - ($(window).height() / 2);
-    var newvalueX = width * pageX * -1 - (-200);
-    var newvalueY = height * pageY * -1 - (0);
+    if( window.innerWidth < 992 ) {
+      var movementStrength = 30;
+      var height = movementStrength / $(window).height();
+      var width = movementStrength / $(window).width();
+      var pageX = e.pageX - ($(window).width() / 2);
+      var pageY = e.pageY - ($(window).height() / 2);
+      var newvalueX = width * pageX * -1 - (-70);
+      var newvalueY = height * pageY * -1 - (-350);
+    } else {
+      var movementStrength = 130;
+      var height = movementStrength / $(window).height();
+      var width = movementStrength / $(window).width();
+      var pageX = e.pageX - ($(window).width() / 2);
+      var pageY = e.pageY - ($(window).height() / 2);
+      var newvalueX = width * pageX * -1 - (-200);
+      var newvalueY = height * pageY * -1 - (20);
+    }
+
     var bgPosition = $(this).css('background-position').split(", ");
     bgPosition[1] = newvalueX+'px '+newvalueY+'px';
     $(this).css({
-      'background-position': bgPosition
+      'background-position': bgPosition,
+      'transition' : 'all 0.3s ease'
     });
-    // console.log($(this).css('background-position'));
-    // $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
   });
 
   var $grid = $('.grid').masonry({

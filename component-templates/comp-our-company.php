@@ -36,7 +36,7 @@
                                             <div class="wrap-image">
                                                 <?php $image = get_sub_field('image'); ?>
                                                 <?php if ($image) : ?>
-                                                    <img class="img-fluid" width="100" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                    <img class="img-fluid" width="150" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -72,7 +72,7 @@
                             </div>
                         <?php elseif (get_row_layout() == 'what_we_do') : ?>
 
-                            <div class="tab-pane fade" style="max-width: 80%;" id="v-pills-<?php echo getIdFromTitle(get_sub_field('title')); ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo getIdFromTitle(get_sub_field('title')); ?>-tab">
+                            <div class="tab-pane what-we-do-tab-pane fade" id="v-pills-<?php echo getIdFromTitle(get_sub_field('title')); ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo getIdFromTitle(get_sub_field('title')); ?>-tab">
                                 <h3 class="heading">
                                     <?php the_sub_field('title'); ?>
                                 </h3>
@@ -105,9 +105,9 @@
                                                 <?php endif; ?>
 
                                             </div>
-                                            <div class="swiper-button-next"></div>
-                                            <div class="swiper-button-prev"></div>
                                         </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
                                 </div>
                             </div>

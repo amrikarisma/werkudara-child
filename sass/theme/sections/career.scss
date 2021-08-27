@@ -25,7 +25,7 @@
         }
         .wrapper-text-header-featured {
             position: absolute;
-            left: 5px;
+            left: 24px;
             bottom: 0px;
             @media (min-width: 992px) {
                 left: vw(100px);
@@ -202,7 +202,7 @@
                         }
                     }
                     .requirement {
-                        padding: 0 20px;
+                        padding: 0 20px 30px 20px;
                         @media (min-width: 992px) {
                             padding:vw(20px);
                         }
@@ -395,11 +395,12 @@
                 background-color: #fff;  
                 border-radius: 25px; 
                 .tab-content-title-recruitment {
-                    width: 150%;
                     font-size: 25px;
                     transition: all 0.3s ease-in-out;
-                    width: 50%;
+                    @media (min-width: 768px) {
+                    }
                     @media (min-width: 992px) {
+                        width: 50%;
                         font-size: vw(25px);
                     }
                     .nav-link {
@@ -472,17 +473,17 @@
                 }
                 .tab-content-content-recruitment {
                     padding: 50px 40px;
-                    font-size: 18px;
+                    font-size: 16px;
                     transition: all 0.3s ease-in-out;
-                    width: 50%;
                     @media (min-width: 992px) {
+                        width: 50%;
                         padding: vw(100px) vw(80px);
                         font-size: vw(25px);
                     }
                     .btn-close {
                         margin-top: -40px;
                         margin-right: -10px;
-                        @media (min-width: 992px) {
+                        @media (min-width: 768px) {
                             display: none;
                         }
                     }

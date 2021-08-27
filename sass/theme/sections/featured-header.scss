@@ -19,12 +19,12 @@
     to {
         opacity: 1;
         background-size: 500px, 300px, 300px;
-        background-position:top 300px left 100px, top 0px left 80px, top 200px left 20px;
+        background-position: left 100px top 400px, 70px 350px, left -50px top 400px;
     }
 }
 .section-featured-home {
     background-size: 500px, 300px, 300px;
-    background-position:top 300px left 100px, top 0px left 80px, top 200px left 20px;
+    background-position: left 100px top 400px, 70px 350px, left -50px top 400px;
     background-repeat: repeat-x, no-repeat, no-repeat;
     background-blend-mode: hard-light, normal, normal;
     transition: all 0.3s ease;
@@ -38,20 +38,26 @@
     }
 }
 .text-featured-header-float {
-    position: absolute;
-    right: 0;
-    top: 160px;
-    font-weight: 400;
     letter-spacing: 6px;
+    font-weight: 400;
     white-space: pre-wrap;
-    width: 70%;
-    @media(min-width: 992px) {
+    padding: 2vh 25px;
+    text-align: center;
+    @media(min-width: 768px) {
+        position: absolute;
+        right: 0;
+        top: 160px;
+        width: 70%;
+        text-align: left;
+        padding: 0;
+    }
+    @media(min-width: 1024px) {
         width: calc(100vw/2);
         top: vw(320px);
         right: vw(-60px);
     }
     h3 {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 300;
         @media(min-width: 992px) {
             font-size: vw(50px);
@@ -62,7 +68,7 @@
         }
     }
     h4 {
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 0;
         font-weight: 300;
         color : var(--main);
@@ -103,6 +109,14 @@ hr {
     transition: all 0.3s ease;
     animation-duration: 8s;
     overflow: hidden;
+    @media(max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 100vh;
+    }
     @media(min-width: 992px) {
         background-size: contain;
         background-position:bottom vw(-160px) right vw(-190px), bottom vw(500px) right;
@@ -111,8 +125,12 @@ hr {
         margin-bottom: vw(-500px);
     }
     .text-section-2 {
-        width: 72%;
         color: var(--dark);
+        text-align: center;
+        @media(min-width: 768px) {
+            width: 72%;
+            text-align: left;
+        }
         h3 {
             font-weight: 300;
             font-size: 30px;
@@ -171,29 +189,34 @@ hr {
             padding-top: vw(30px);
         }
         .item-featured {
-            transition: all 0.5s ease-in-out;
-            // transition-delay: 0s;
-            // transform: scale(1.0);
+            transition: all 0.5s ease-out;
+            transform: scale(1.0);
             &:hover {
                 cursor: pointer;
-                animation: shake 0.5s;
-                animation-iteration-count:1;
-                transition: all 0.5s ease-in-out;
+                // animation: shake 0.5s;
+                // animation-iteration-count:1;
+                transform: scale(1.2);
+                transition: all 0.5s ease-out;
                 h4 {
+                    transition-delay: 0s;
                     opacity: 1;
+                    color: var(--dark);
+                }
+            }
+            h4 {
+                opacity: 0.4;
+                font-size: 18px;
+                letter-spacing: 2px;
+                transition-delay: 0s;
+                color: var(--secondary);
+                @media(min-width: 992px) {
+                    font-size: vw(25px);
+                    letter-spacing: vw(2px);
+    
                 }
             }
         }
-        h4 {
-            opacity: 0.4;
-            font-size: 18px;
-            letter-spacing: 2px;
-            @media(min-width: 992px) {
-                font-size: vw(25px);
-                letter-spacing: vw(2px);
 
-            }
-        }
     }
 }
 .section-home-4 {
@@ -220,7 +243,7 @@ hr {
         font-size: 20p;
         padding-bottom: 50px;
         text-align: center;
-        @media(min-width: 992px) {
+        @media(min-width: 768px) {
             text-align: left;
             font-size: vw(25px);
             padding-bottom: vw(50px);
@@ -236,8 +259,7 @@ hr {
         }
     }
     .wrapper-section-team {
-        margin-left: 33px;
-        @media(min-width: 992px) {
+        @media(min-width: 768px) {
             margin-left: vw(33px);
         }
         &:hover {
@@ -506,6 +528,19 @@ hr {
                     line-height: vw(32px);
                 }
             }
+            .list-client-logo {
+                margin-bottom: 54px;
+                @media (min-width: 992px) {
+                    margin-bottom: 0;
+                }
+                .swiper-button-next, .swiper-button-prev {
+                    @media (max-width: 991px) {
+                        top: auto;
+                        bottom: 0;
+                    }
+                }
+            }
+
             .swiper-container {
                 width: 95%;
                 height: 100%;
@@ -539,15 +574,20 @@ hr {
                 -ms-flex-align: center;
                 -webkit-align-items: center;
                 align-items: center;
+                @media(min-width: 768px) {
+                    padding: 10px 20px;
+                    height: 100px;
+                }
                 @media(min-width: 992px) {
                     padding: vw(10px) vw(20px);
                     height: vw(120px);
                 }
             }
+            
             .box-client-logo {
                 height: 100%;
                 padding: 0;
-                @media(min-width: 992px) {
+                @media(min-width: 768px) {
                     padding: vw(25px);
                 }
             }
@@ -566,6 +606,7 @@ hr {
             font-size: vw(25px);
             padding-bottom: vw(50px);
         }
+
         p {
             font-size: 20px;
             margin-bottom: 30px;
@@ -602,6 +643,7 @@ hr {
             padding-bottom: vw(70px);
         }
         #tree-1 {
+            display: none;
             background-size: 200px;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -611,6 +653,15 @@ hr {
             bottom: auto;
             height: 200px;
             width: 400px;
+            @media(min-width: 768px) {
+                display: block;
+                background-size: vw(1000px);
+                left: vw(-170px);
+                top: auto;
+                bottom: vw(390px);
+                height: vw(900px);
+                width: vw(570px);
+            }
             @media(min-width: 992px) {
                 background-size: vw(1000px);
                 left: vw(-170px);
@@ -621,6 +672,7 @@ hr {
             }
         }
         #tree-2 {
+            // display: none;
             background-size: 250px;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -629,6 +681,14 @@ hr {
             bottom: 50px;
             height: 300px;
             width: 400px;
+            @media(min-width: 768px) {
+                // display: block;
+                background-size: vw(600px);
+                right: vw(-45px);
+                bottom: vw(360px);
+                height: vw(900px);
+                width: vw(400px);
+            }
             @media(min-width: 992px) {
                 background-size: vw(600px);
                 right: vw(-45px);
@@ -638,6 +698,7 @@ hr {
             }
         }
         #tree-3 {
+            display: none;
             background-size: 400px;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -646,6 +707,14 @@ hr {
             bottom: 100px;
             height: 400px;
             width: 400px;
+            @media(min-width: 768px) {
+                display: block;
+                background-size: vw(500px);
+                right: vw(175px);
+                bottom: vw(100px);
+                height: vw(900px);
+                width: vw(400px);
+            }
             @media(min-width: 992px) {
                 background-size: vw(500px);
                 right: vw(175px);
@@ -688,10 +757,10 @@ hr {
             }
         }
         svg {
-            width: 100px;
+            width: 60px;
             height: auto;
             opacity: 0.5;
-            @media(min-width: 992px) {
+            @media(min-width: 768px) {
                 width: vw(100px);
             }
             &:hover {
@@ -777,7 +846,7 @@ hr {
             display: inline-block;
         }
         .counting-number {
-            font-size: 90px;
+            font-size: 50px;
             font-weight: 300;
             color: var(--main);
             position: static;
@@ -791,7 +860,7 @@ hr {
 
             span {
                 color: #203430;
-                font-size: 23px;
+                font-size: 18px;
                 font-weight: bold;
                 display: block;
                 padding: 0;
@@ -874,7 +943,7 @@ hr {
         }
     }
     .text-content-section-8 {
-        font-size: 25px;
+        font-size: 16px;
         padding-bottom: 50px;
         font-style: italic;
         @media(min-width: 992px) {
@@ -974,7 +1043,7 @@ hr {
         font-weight: 300;
         text-align: left;
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 23px;
         margin-bottom: 30px;
         color: var(--main);
         @media(min-width: 992px) {
@@ -1008,7 +1077,7 @@ hr {
                 padding: vw(10px) 0 vw(100px) 0;
             }
             p {
-                font-size: 24px;
+                font-size: 16px;
                 font-weight: 400;
                 letter-spacing: 1px;
                 opacity: 0.5;
@@ -1045,7 +1114,7 @@ hr {
                 }
             }
             .footer-logo-dive {
-                font-size: 26px;
+                font-size: 20px;
                 letter-spacing: 5px;
                 opacity: 0.5;
                 @media(min-width: 992px) {
@@ -1156,7 +1225,7 @@ hr {
 .section-home-11 {
     position: relative;
     padding-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     text-align: center;
     background-color: var(--main);
     color: var(--white);

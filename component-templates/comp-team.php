@@ -3,12 +3,12 @@
         <div class="text-section-4">
             <h3 class="" data-aos="fade-up" data-aos-delay="400"><?php echo get_sub_field('title'); ?></h3>
             <div class="row pt-4">
-                <div class="col-md-4">
+                <div class="col-md-5 col-lg-4">
                     <div class="text-content-section-4" data-aos="fade-left" data-aos-delay="700">
                         <?php echo get_sub_field('content'); ?>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7 col-lg-8">
                     <?php if (have_rows('list')) : ?>
                         <div class="wrapper-section-team">
                             <div class="button-view-wrapper">

@@ -41,7 +41,7 @@ $container = get_theme_mod('bensemangat_container_type');
                             'menu_class'      => 'navbar-nav',
                             'fallback_cb'     => '',
                             'menu_id'         => 'primary-menu',
-                            'depth'           => 2,
+                            'depth'           => 1,
                         )
                     );
                     ?>

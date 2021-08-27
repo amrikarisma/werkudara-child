@@ -28,10 +28,10 @@
                                 <div class="tab-pane fade<?php echo $tablistid == 0 ? ' show active' : ''; ?>" id="nav-<?php echo $tablistid ?>" role="tabpanel" aria-labelledby="nav-<?php echo $tablistid ?>-tab">
                                     <div class="content-tab-wrapper">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-lg-4">
                                                 <?php echo get_sub_field('content'); ?>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-lg-8">
                                                 <div class="list-client-logo">
                                                     <div class="swiper-container swiper-client-logo">
                                                         <div class="swiper-wrapper">
